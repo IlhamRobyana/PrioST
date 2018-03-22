@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="TestSuiteType">
+    	<xs:sequence>
+    		<xs:element name="TestCase" type="TestCaseType"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TestCaseType">
+    	<xs:sequence>
+    		<xs:element name="Edge" type="EdgeType" maxOccurs="unbounded" minOccurs="1"/>
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EdgeType">
+    	<xs:sequence>
+    		<xs:element name="label" type="xs:string" maxOccurs="1" minOccurs="1"/>
+    	</xs:sequence>
+    	<xs:attribute name="from" type="xs:string" />
+    	<xs:attribute name="to" type="xs:string" />
+    	<xs:attribute name="type">
+    		<xs:simpleType>
+    			<xs:restriction base="xs:string">
+    				<xs:enumeration value="STEPS" />
+    				<xs:enumeration value="EXPECTED_RESULTS" />
+    				<xs:enumeration value="CONDITIONS" />
+    				<xs:enumeration value="DEFAULT" />
+    			</xs:restriction>
+    		</xs:simpleType>
+    	</xs:attribute>
+    </xs:complexType>
+
+    <xs:element name="TestSuite" type="TestSuiteType"/>
+</xs:schema>

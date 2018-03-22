@@ -1,0 +1,14 @@
+#TGF BNF syntax definition
+
+1- <validTGFFile> ::= <nodesDefinition> "#" <edgesDefinition>
+2- <nodesDefinition> ::= <nodeLine> | <nodeLine> <nodesDefinition>
+3- <nodeLine> ::= <nodeIndex> " " <nodeLabel>
+4- <edgesDefinition> ::= <edgeLine> | <edgeLine> <edgesDefinition>
+5- <edgeLine> ::= <nodeIndex> " " <nodeIndex> " " <label>
+
+
+#Semantic restrictions
+- In the rule 3, the <nodeIndex> is an integer number used to link nodes for edge definition and <nodeLabel> is the node label. We suggest repeating the value in both fields in order to not confounding both values;
+- In the rule 5, the numbers must exist in the nodes definition;
+- The graph must have just one root, in other words, just one node must have no parent node;
+- The graph must not have any disconnected node;

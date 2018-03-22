@@ -1,0 +1,12 @@
+0 0
+1 1
+2 2
+3 3
+4 4
+5 5
+#
+0 1 C - Precondition
+1 2 S - Step 1
+2 x R - Result 1
+1 4 S - Step 2
+4 5 R - Result 2

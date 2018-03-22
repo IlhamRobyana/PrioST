@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuite><TestCase><Edge from="0" to="1" type="CONDITION"><label>Precondition</label></Edge><Edge from="1" to="4" type="STEP"><label>Step 2</label></Edge><Edge from="4" to="5" type="RESULT"><label>Result 2</label></Edge></TestCase><TestCase><Edge from="0" to="1" type="CONDITION"><label>Precondition</label></Edge><Edge from="1" to="2" type="STEP"><label>Step 1</label></Edge><Edge from="2" to="3" type="RESULT"><label>Result 1</label></Edge></TestCase></TestSuite>
