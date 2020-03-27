@@ -2,6 +2,7 @@ import unittest
 
 from model.alts import *
 
+
 class TestState(unittest.TestCase):
     def test_empty_state(self):
         try:
@@ -10,7 +11,8 @@ class TestState(unittest.TestCase):
             self.assertTrue(True)
 
     def test_state_creation(self):
-        state = State('label1')
+        state = State('id1', 'label1')
+        self.assertEqual(state.id, 'id1')
         self.assertEqual(state.label, 'label1')
 
 
@@ -22,19 +24,24 @@ class TestTransition(unittest.TestCase):
             self.assertTrue(True)
 
     def test_transition_creation_without_type(self):
-        from_state = State('0')
-        to_state = State('1')
+        from_state = State('s0', '0')
+        to_state = State('s1', '1')
         transition_label = 'Action Performed'
-        transition = Transition(from_state, transition_label, to_state)
+        transition_id = 't1'
+        transition = Transition(from_state, transition_id,
+                                transition_label, to_state)
         representation = '0 -> Action Performed -> 1'
         self.assertTrue(repr(transition), '')
 
     def test_transition_creation_full(self):
-        from_state = State('0')
-        to_state = State('1')
+        from_state = State('s0', '0')
+        to_state = State('s1', '1')
+        transition_id = 't1'
         transition_label = 'Action Performed'
-        transition_type = 'step'  # Assuming it could be in [step, condition, expected_result]
-        transition = Transition(from_state, transition_label, to_state, transition_type)
+        # Assuming it could be in [step, condition, expected_result]
+        transition_type = 'step'
+        transition = Transition(
+            from_state, transition_id, transition_label, to_state, transition_type)
         representation = '0 -> (step) Action Performed -> 1'
         self.assertTrue(repr(transition), '')
 
@@ -49,12 +56,14 @@ class TestALTS(unittest.TestCase):
 
     def test_simple_alts(self):
         alts = ALTS('simple')
-        state0 = State('0')
-        state1 = State('1')
-        transition_1 = Transition(state0, 'Run the test command', state1, 'step')
+        state0 = State('s0', '0')
+        state1 = State('s1', '1')
+        transition_1 = Transition(
+            state0, 't1', 'Run the test command', state1, 'step')
         alts.add_transition(transition_1)
-        state2 = State('2')
-        transition2 = Transition(state1, 'The user must see a message on the output', state2, 'result')
+        state2 = State('s2', '2')
+        transition2 = Transition(
+            state1, 't2', 'The user must see a message on the output', state2, 'result')
         alts.add_transition(transition2)
         self.assertEqual(alts.name, 'simple')
         self.assertEqual(alts.initial_state.label, '0')
