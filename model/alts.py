@@ -12,7 +12,8 @@ class ALTS:
         self.name = name
         self.initial_state = None
         self.states = {}  # key:the label of the state | value: the instance itself
-        self.transitions = {}  # key: tuple formed by the fields of the transition | value: the instance itself
+        # key: tuple formed by the fields of the transition | value: the instance itself
+        self.transitions = {}
 
     def __contains__(self, item):
         """
@@ -40,16 +41,17 @@ class ALTS:
         :param state_to_add: the state to be added
         """
         if isinstance(state_to_add, State) and repr(state_to_add) not in self.states:
-            self.states[repr(state_to_add)] = state_to_add
+            self.states[state_to_add.id] = state_to_add
 
 
 class State:
-    def __init__(self, label):
+    def __init__(self, id, label):
         """
         State is a component of an ALTS, which in practice behaves as a node in a graph
         :param label: the label of a state
         """
         self.label = label
+        self.id = id
         self.incoming_transitions = []
         self.outgoing_transitions = []
 
@@ -58,7 +60,7 @@ class State:
 
 
 class Transition:
-    def __init__(self, from_state, label, to_state, transition_type=''):
+    def __init__(self, from_state, id, label, to_state, transition_type=''):
         """
         Transition is a component of an ALTS, which in practice behaves as an edge in a graph, specifically in a digraph
         :param transition_type: a type to be associated to the transition
@@ -67,13 +69,16 @@ class Transition:
         :param to_state: the state that this transition leads to
         """
         if not isinstance(from_state, State):
-            raise TypeError('The state \"from\" this transition is not instance of State')
+            raise TypeError(
+                'The state \"from\" this transition is not instance of State')
 
         if not isinstance(to_state, State):
-            raise TypeError('The state \"to\" this transition is not instance of State')
+            raise TypeError(
+                'The state \"to\" this transition is not instance of State')
 
         self.transition_type = transition_type
         self.from_state = from_state
+        self.id = id
         self.label = label
         self.to_state = to_state
         self.from_state.outgoing_transitions.append(self)
@@ -81,14 +86,16 @@ class Transition:
 
     def __repr__(self):
         prefix = '{} -> '.format(self.from_state)
-        middle = '({}) '.format(self.transition_type) if self.transition_type else ''
+        middle = '({}) '.format(
+            self.transition_type) if self.transition_type else ''
         middle += self.label
         suffix = ' -> {}'.format(self.to_state)
         return prefix + middle + suffix
 
     def __eq__(self, other_transition):
         return isinstance(other_transition, Transition) and \
-               self.from_state == other_transition and \
-               self.label == other_transition.label and \
-               self.to_state == other_transition.to_state and \
-               self.transition_type == other_transition.transition_type
+            self.from_state == other_transition and \
+            self.id == other_transition.id and \
+            self.label == other_transition.label and \
+            self.to_state == other_transition.to_state and \
+            self.transition_type == other_transition.transition_type
