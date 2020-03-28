@@ -55,8 +55,14 @@ class State:
         self.incoming_transitions = []
         self.outgoing_transitions = []
 
+    def is_leaf(self):
+        return len(self.outgoing_transitions) == 0
+
     def __repr__(self):
         return self.label
+
+    def __eq__(self, other):
+        return isinstance(other, State) and self.label == other.label and self.id == other.id
 
 
 class Transition:
@@ -94,7 +100,7 @@ class Transition:
 
     def __eq__(self, other_transition):
         return isinstance(other_transition, Transition) and \
-            self.from_state == other_transition and \
+            self.from_state == other_transition.from_state and \
             self.id == other_transition.id and \
             self.label == other_transition.label and \
             self.to_state == other_transition.to_state and \
