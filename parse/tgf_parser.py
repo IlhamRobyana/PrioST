@@ -1,6 +1,7 @@
 import re
 from model.alts import *
 
+
 class TGFParser:
 
     def __init__(self):
@@ -26,12 +27,13 @@ class TGFParser:
             while line:
                 fields = self.transition_re.match(line).groups()
                 if len(fields) is 3:
-                    alts.add_transition(Transition(states[fields[0]], '', fields[2], states[fields[1]]))
+                    alts.add_transition(Transition(
+                        states[fields[0]], '', fields[2], states[fields[1]]))
                 line = tgf.readline()
         return alts
 
 
 if __name__ == '__main__':
-    file = 'resources/tgf/ConditionStepResult.tgf'
+    file = '../resources/tgf/ConditionStepResult.tgf'
     parser = TGFParser()
     parser.parse(file)

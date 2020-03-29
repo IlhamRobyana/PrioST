@@ -1,4 +1,4 @@
-from parser.test.tgfparser_test_suite import TestTGFParser
+from parse.test.tgfparser_test_suite import TestTGFParser
 
 import unittest
 

@@ -2,6 +2,7 @@ import xml.sax
 
 from model.activity_diagram import *
 
+
 class ActivityDiagramHandler(xml.sax.ContentHandler):
     """
     CurentData is the type of tag the parser getting
@@ -18,10 +19,6 @@ class ActivityDiagramHandler(xml.sax.ContentHandler):
             id = attributes.get("id")
             parent = attributes.get("parent")
             style = attributes.get("style")
-
-            # print("ID: ", id)
-            # print("Parent: ", parent)
-            # print("Style: ", style)
             if attributes.get("vertex") == "1":
                 value = attributes.get("value")
 
@@ -29,17 +26,12 @@ class ActivityDiagramHandler(xml.sax.ContentHandler):
                 activityDiagram.add_vertex(vertex)
                 if style == "ellipse;whiteSpace=wrap;html=1;aspect=fixed;":
                     activityDiagram.start_node = vertex
-                # print("Type: vertex")
-                # print("Value: ", value)
             elif attributes.get("edge") == "1":
                 source = attributes.get("source")
                 target = attributes.get("target")
 
                 edge = Edge(id, parent, style, source, target)
                 activityDiagram.add_edge(edge)
-                # print("Type: edge")
-                # print("Source: ", source)
-                # print("Target: ", target)
 
     # Call when an elements ends
     def endElement(self, tag):
@@ -57,5 +49,10 @@ if (__name__ == "__main__"):
     Handler = ActivityDiagramHandler()
     parser.setContentHandler(Handler)
 
-    parser.parse("../resources/xml/BubbleSortActivityDiagram.xml")
+    directory = "../resources/xml/"
+    print("Type the name of the activity diagram file:")
+    file = str(input())
+
+    activityDiagram = ActivityDiagram(file)
+    parser.parse(directory + file + ".xml")
     activityDiagram.convert_to_alts()
