@@ -1,4 +1,6 @@
 from test_generation.test_suite import TestSuite, TestCase
+from model.alts import *
+from parse.json_parser import *
 
 
 class TestCaseGenerator:
@@ -25,7 +27,8 @@ class TestCaseGenerator:
         for neighbor_transition in state.outgoing_transitions:
             next_path = current_path.copy()
             next_path.append(neighbor_transition)
-            self.__traverse(neighbor_transition.to_state, next_path, n, test_suite)
+            self.__traverse(neighbor_transition.to_state,
+                            next_path, n, test_suite)
 
     @staticmethod
     def __occurrences(path, state):
@@ -36,3 +39,13 @@ class TestCaseGenerator:
                     occurrences += 1
 
         return occurrences
+
+
+if __name__ == '__main__':
+    print("Type the name of the ALTS file:")
+    file = str(input())
+    alts = JSONParser().load(file)
+
+    ts = TestCaseGenerator().all_n_loop(alts)
+    ts.name = file
+    JSONParser().save(file + "TestSuite", ts)

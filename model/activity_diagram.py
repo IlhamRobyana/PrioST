@@ -1,5 +1,7 @@
 import jsonpickle
 from model.alts import *
+from parse.json_parser import *
+
 
 class ActivityDiagram:
     """
@@ -22,26 +24,14 @@ class ActivityDiagram:
             self.edges[edge_to_add.id] = edge_to_add
 
     def convert_to_alts(self):
-        alts = ALTS('test')
+        alts = ALTS(self.name)
         for edge in self.edges.values():
             source = State(edge.source, self.vertices[edge.source].value)
             target = State(edge.target, self.vertices[edge.target].value)
             transition = Transition(
                 source, edge.id, edge.value, target, 'step')
             alts.add_transition(transition)
-
-        # TODO: Make them their own modules
-        f = open('../resources/json/' + alts.name + '.json', 'w')
-        json = jsonpickle.encode(alts)
-        f.write(json)
-
-        g = open('../resources/json/' + alts.name + '.json')
-        json_str = g.read()
-        obj = jsonpickle.decode(json_str)
-        print(obj.transitions)
-
-
-activityDiagram = ActivityDiagram("test")
+        JSONParser().save(alts.name, alts)
 
 
 class Vertex:

@@ -1,6 +1,6 @@
 import unittest
-from parser.tgf_parser import TGFParser
-from parser.test import root_dir
+from parse.tgf_parser import TGFParser
+from parse.test import root_dir
 import os
 
 

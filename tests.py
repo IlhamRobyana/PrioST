@@ -1,5 +1,5 @@
 from model import tests as model
-from parser import tests as parser
+from parse import tests as parse
 from test_generation import tests as tcm
 
 
@@ -7,7 +7,7 @@ import unittest
 
 all_tests = unittest.TestSuite([
     model.models_test_suite,
-    parser.parser_tests,
+    parse.parser_tests,
     tcm.teststructure_test_suite
 ])
 
