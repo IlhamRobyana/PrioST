@@ -23,19 +23,19 @@ class TestCaseGenerator:
         if state.is_leaf() or self.__occurrences(current_path, state) > n:
             tc = TestCase(current_path)
             test_suite.insert(tc)
-
-        for neighbor_transition in state.outgoing_transitions:
-            next_path = current_path.copy()
-            next_path.append(neighbor_transition)
-            self.__traverse(neighbor_transition.to_state,
-                            next_path, n, test_suite)
+        else:
+            for neighbor_transition in state.outgoing_transitions:
+                next_path = current_path.copy()
+                next_path.append(neighbor_transition)
+                self.__traverse(neighbor_transition.to_state,
+                                next_path, n, test_suite)
 
     @staticmethod
     def __occurrences(path, state):
         occurrences = 0
         if len(path) > 0:
             for t in path:
-                if path[0].from_state == state:
+                if t.from_state == state:
                     occurrences += 1
 
         return occurrences
@@ -46,6 +46,7 @@ if __name__ == '__main__':
     file = str(input())
     alts = JSONParser().load(file)
 
-    ts = TestCaseGenerator().all_n_loop(alts)
+    ts = TestCaseGenerator().all_n_loop(alts, 1)
     ts.name = file
     JSONParser().save(file + "TestSuite", ts)
+    print(len(ts))
