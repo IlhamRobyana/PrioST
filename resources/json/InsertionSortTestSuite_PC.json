@@ -1,6 +1,12 @@
-{
-  "data": [
-    {
+[
+  {
+    "complexity": 67,
+    "conditions": 5,
+    "id": 0,
+    "number": 16,
+    "predicate": 5,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -338,47 +344,16 @@
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
     },
-    {
-      "data": [],
-      "name": [
-        {
-          "py/id": 5
-        },
-        {
-          "py/id": 12
-        },
-        {
-          "py/id": 16
-        },
-        {
-          "py/id": 43
-        },
-        {
-          "py/id": 40
-        },
-        {
-          "py/id": 37
-        },
-        {
-          "py/id": 25
-        },
-        {
-          "py/id": 22
-        },
-        {
-          "py/id": 19
-        },
-        {
-          "py/id": 50
-        },
-        {
-          "py/id": 54
-        }
-      ],
-      "py/object": "test_generation.test_suite.TestCase",
-      "py/seq": []
-    },
-    {
+    "weight": 41
+  },
+  {
+    "complexity": 67,
+    "conditions": 5,
+    "id": 2,
+    "number": 16,
+    "predicate": 5,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -430,121 +405,16 @@
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
     },
-    {
-      "data": [],
-      "name": [
-        {
-          "py/id": 5
-        },
-        {
-          "py/id": 12
-        },
-        {
-          "py/id": 16
-        },
-        {
-          "py/id": 43
-        },
-        {
-          "py/id": 40
-        },
-        {
-          "py/id": 37
-        },
-        {
-          "py/id": 34
-        },
-        {
-          "py/id": 31
-        },
-        {
-          "py/id": 28
-        },
-        {
-          "py/id": 25
-        },
-        {
-          "py/id": 22
-        },
-        {
-          "py/id": 19
-        },
-        {
-          "py/id": 50
-        },
-        {
-          "py/id": 54
-        }
-      ],
-      "py/object": "test_generation.test_suite.TestCase",
-      "py/seq": []
-    },
-    {
-      "data": [],
-      "name": [
-        {
-          "py/id": 5
-        },
-        {
-          "py/id": 12
-        },
-        {
-          "py/id": 16
-        },
-        {
-          "py/id": 43
-        },
-        {
-          "py/id": 40
-        },
-        {
-          "py/id": 37
-        },
-        {
-          "py/id": 34
-        },
-        {
-          "py/id": 31
-        },
-        {
-          "py/id": 28
-        },
-        {
-          "py/id": 34
-        },
-        {
-          "py/id": 31
-        },
-        {
-          "py/id": 28
-        }
-      ],
-      "py/object": "test_generation.test_suite.TestCase",
-      "py/seq": []
-    },
-    {
-      "data": [],
-      "name": [
-        {
-          "py/id": 5
-        },
-        {
-          "py/id": 12
-        },
-        {
-          "py/id": 16
-        },
-        {
-          "py/id": 50
-        },
-        {
-          "py/id": 54
-        }
-      ],
-      "py/object": "test_generation.test_suite.TestCase",
-      "py/seq": []
-    },
-    {
+    "weight": 41
+  },
+  {
+    "complexity": 67,
+    "conditions": 5,
+    "id": 6,
+    "number": 16,
+    "predicate": 5,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -595,31 +465,281 @@
       ],
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
-    }
-  ],
-  "name": "InsertionSort",
-  "py/object": "test_generation.test_suite.TestSuite",
-  "py/seq": [
-    {
+    },
+    "weight": 41
+  },
+  {
+    "complexity": 67,
+    "conditions": 5,
+    "id": 7,
+    "number": 16,
+    "predicate": 5,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
       "py/id": 2
     },
-    {
-      "py/id": 58
+    "weight": 41
+  },
+  {
+    "complexity": 67,
+    "conditions": 5,
+    "id": 9,
+    "number": 16,
+    "predicate": 5,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "py/id": 59
     },
-    {
-      "py/id": 61
+    "weight": 41
+  },
+  {
+    "complexity": 67,
+    "conditions": 5,
+    "id": 13,
+    "number": 16,
+    "predicate": 5,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "py/id": 63
     },
-    {
-      "py/id": 64
+    "weight": 41
+  },
+  {
+    "complexity": 59,
+    "conditions": 4,
+    "id": 3,
+    "number": 15,
+    "predicate": 4,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "data": [],
+      "name": [
+        {
+          "py/id": 5
+        },
+        {
+          "py/id": 12
+        },
+        {
+          "py/id": 16
+        },
+        {
+          "py/id": 43
+        },
+        {
+          "py/id": 40
+        },
+        {
+          "py/id": 37
+        },
+        {
+          "py/id": 34
+        },
+        {
+          "py/id": 31
+        },
+        {
+          "py/id": 28
+        },
+        {
+          "py/id": 25
+        },
+        {
+          "py/id": 22
+        },
+        {
+          "py/id": 19
+        },
+        {
+          "py/id": 50
+        },
+        {
+          "py/id": 54
+        }
+      ],
+      "py/object": "test_generation.test_suite.TestCase",
+      "py/seq": []
     },
-    {
-      "py/id": 67
-    },
-    {
+    "weight": 36
+  },
+  {
+    "complexity": 59,
+    "conditions": 4,
+    "id": 10,
+    "number": 15,
+    "predicate": 4,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
       "py/id": 70
     },
-    {
-      "py/id": 73
-    }
-  ]
-}
+    "weight": 36
+  },
+  {
+    "complexity": 54,
+    "conditions": 4,
+    "id": 4,
+    "number": 13,
+    "predicate": 4,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "data": [],
+      "name": [
+        {
+          "py/id": 5
+        },
+        {
+          "py/id": 12
+        },
+        {
+          "py/id": 16
+        },
+        {
+          "py/id": 43
+        },
+        {
+          "py/id": 40
+        },
+        {
+          "py/id": 37
+        },
+        {
+          "py/id": 34
+        },
+        {
+          "py/id": 31
+        },
+        {
+          "py/id": 28
+        },
+        {
+          "py/id": 34
+        },
+        {
+          "py/id": 31
+        },
+        {
+          "py/id": 28
+        }
+      ],
+      "py/object": "test_generation.test_suite.TestCase",
+      "py/seq": []
+    },
+    "weight": 33
+  },
+  {
+    "complexity": 54,
+    "conditions": 4,
+    "id": 11,
+    "number": 13,
+    "predicate": 4,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "py/id": 75
+    },
+    "weight": 33
+  },
+  {
+    "complexity": 46,
+    "conditions": 3,
+    "id": 1,
+    "number": 12,
+    "predicate": 3,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "data": [],
+      "name": [
+        {
+          "py/id": 5
+        },
+        {
+          "py/id": 12
+        },
+        {
+          "py/id": 16
+        },
+        {
+          "py/id": 43
+        },
+        {
+          "py/id": 40
+        },
+        {
+          "py/id": 37
+        },
+        {
+          "py/id": 25
+        },
+        {
+          "py/id": 22
+        },
+        {
+          "py/id": 19
+        },
+        {
+          "py/id": 50
+        },
+        {
+          "py/id": 54
+        }
+      ],
+      "py/object": "test_generation.test_suite.TestCase",
+      "py/seq": []
+    },
+    "weight": 28
+  },
+  {
+    "complexity": 46,
+    "conditions": 3,
+    "id": 8,
+    "number": 12,
+    "predicate": 3,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "py/id": 80
+    },
+    "weight": 28
+  },
+  {
+    "complexity": 20,
+    "conditions": 1,
+    "id": 5,
+    "number": 6,
+    "predicate": 1,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "data": [],
+      "name": [
+        {
+          "py/id": 5
+        },
+        {
+          "py/id": 12
+        },
+        {
+          "py/id": 16
+        },
+        {
+          "py/id": 50
+        },
+        {
+          "py/id": 54
+        }
+      ],
+      "py/object": "test_generation.test_suite.TestCase",
+      "py/seq": []
+    },
+    "weight": 12
+  },
+  {
+    "complexity": 20,
+    "conditions": 1,
+    "id": 12,
+    "number": 6,
+    "predicate": 1,
+    "py/object": "__main__.PathComplexity",
+    "test_case": {
+      "py/id": 85
+    },
+    "weight": 12
+  }
+]
