@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+import sys
+from argparse import ArgumentParser
+from parse.tgf_parser import TGFParser
+
+__PROG_NAME__ = 'prioST'
+__PROG_DESCRIPTION__ = 'A Model-based Testing tool able to generate and prioritize test cases'
+__GENERATE_DESCRIPTION__ = 'Generate test cases by traversing the input diagram'
+__PRIORITIZE_DESCRIPTION__ = 'Prioritize test cases from the input test suite'
+
+__N_LOOP__ = 'Number of times a loop is traversed'
+__IN_MODEL__ = 'A supported input model: Activity Diagram in .xml or an LTS in .tgf'
+__OUT_TS__ = 'A test suite output file'
+
+__INPUT_TS__ = 'A test suite input file'
+__OUTPUT_PTS__ = 'A prioritized output test suite file'
+
+
+def get_command_parser():
+    parser = ArgumentParser(prog=__PROG_NAME__, description=__PROG_DESCRIPTION__)
+    subparsers = parser.add_subparsers()
+
+    generate = subparsers.add_parser('generate', help=__GENERATE_DESCRIPTION__)
+    generate.add_argument('-l', '--n-loops', dest='loop', default=1, type=int, help=__N_LOOP__)
+    generate.add_argument('input', metavar='input_model', help=__IN_MODEL__)
+    generate.add_argument('output', metavar='output_model', help=__OUT_TS__)
+
+    prioritize = subparsers.add_parser('prioritize', help=__PRIORITIZE_DESCRIPTION__)
+    prioritize.add_argument('-t', '--technique', choices=['tech1', 'tech2'])
+    prioritize.add_argument('input', metavar='input_TS', help=__INPUT_TS__)
+    prioritize.add_argument('output', metavar='output_PTS', help=__OUTPUT_PTS__)
+
+    return parser
+
+
+def run_command(command, options):
+    if command is 'generate':
+        # check options and generate test cases
+        pass
+    elif command is 'prioritize':
+        # check option and prioritize test suites
+        pass
+    else:
+        print('The command {} is not valid. Please enter a valid command or -h (--help) to read the help')
+
+
+if __name__ == '__main__':
+    command_parser = get_command_parser()
+    command = sys.argv[1]
+    options = command_parser.parse_args()
+    run_command(command, options)
