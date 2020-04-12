@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="Electron" modified="2020-03-23T05:28:36.652Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.6.5 Chrome/80.0.3987.86 Electron/8.0.0 Safari/537.36" etag="6E9vC34CzMsVvB4folQK" version="12.6.5" type="device">
+<mxfile host="Electron" modified="2020-04-02T03:21:39.126Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.6.5 Chrome/80.0.3987.86 Electron/8.0.0 Safari/537.36" etag="MR2eBcXs68Kmj11dXXcU" version="12.6.5" type="device">
   <diagram id="KNWanZ54GY8fvMGWVbjZ" name="Page-1">
-    <mxGraphModel dx="1240" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1021" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -17,119 +17,98 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--7" value="Input Number" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="145" y="220" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="QOX-QOyRL-U3UBkbFy3--21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--9" target="QOX-QOyRL-U3UBkbFy3--20" edge="1">
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QOX-QOyRL-U3UBkbFy3--9" target="6Raoqn8c_ROnzDJCiVEP-24">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--9" value="Assigning First Pointer Next to First Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="305" y="220" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QOX-QOyRL-U3UBkbFy3--10" target="6Raoqn8c_ROnzDJCiVEP-6">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="685" y="450"/>
-            </Array>
-          </mxGeometry>
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QOX-QOyRL-U3UBkbFy3--10" target="6Raoqn8c_ROnzDJCiVEP-6">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--10" value="Move Second Pointer to&amp;nbsp; Next Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="810" y="420" width="120" height="60" as="geometry"/>
+          <mxGeometry x="790" y="520" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QOX-QOyRL-U3UBkbFy3--15" target="QOX-QOyRL-U3UBkbFy3--10">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--15" target="QOX-QOyRL-U3UBkbFy3--10" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--15" value="Assign Min Pointer With Second Pointer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="965" y="420" width="120" height="60" as="geometry"/>
+          <mxGeometry x="945" y="520" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--20" target="7L9kyKC1EE25UCXVwFts-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="660" y="250" as="targetPoint"/>
+            <mxPoint x="660" y="350" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--20" value="Assigning Min Pointer with First Pointer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="465" y="220" width="120" height="60" as="geometry"/>
+          <mxGeometry x="465" y="320" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QOX-QOyRL-U3UBkbFy3--37" target="q8Px36Bj9dSwdPajYqEf-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="125" y="450.0000000000001" as="targetPoint"/>
+            <mxPoint x="125" y="350.0000000000001" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--37" value="Result" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="145" y="420" width="120" height="60" as="geometry"/>
+          <mxGeometry x="145" y="320" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-10" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zZ7NoIVB4Zub_XLmL1w5-13" target="QOX-QOyRL-U3UBkbFy3--15">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-10" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zZ7NoIVB4Zub_XLmL1w5-13" target="QOX-QOyRL-U3UBkbFy3--15" edge="1">
           <mxGeometry x="-0.8378" relative="1" as="geometry">
             <mxPoint as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-12" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zZ7NoIVB4Zub_XLmL1w5-13" target="QOX-QOyRL-U3UBkbFy3--10">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-12" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="zZ7NoIVB4Zub_XLmL1w5-13" target="QOX-QOyRL-U3UBkbFy3--10" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-13" value="Check If Second Pointer Element is Less Then Min Pointer Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="830" y="310" width="80" height="80" as="geometry"/>
+          <mxGeometry x="810" y="410" width="80" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
-          <mxGeometry x="95" y="435" width="30" height="30" as="geometry"/>
+          <mxGeometry x="95" y="335" width="30" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="7L9kyKC1EE25UCXVwFts-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7L9kyKC1EE25UCXVwFts-1" target="zZ7NoIVB4Zub_XLmL1w5-13" edge="1">
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7L9kyKC1EE25UCXVwFts-1" target="6Raoqn8c_ROnzDJCiVEP-6">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="7L9kyKC1EE25UCXVwFts-1" value="Assgining Second&amp;nbsp; Pointer with Element Next to First Pointer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="625" y="220" width="120" height="60" as="geometry"/>
+          <mxGeometry x="625" y="320" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="6CrX1b6ms6sQ5mfcsc79-13" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6CrX1b6ms6sQ5mfcsc79-1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="425" y="350" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-21" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-6" target="zZ7NoIVB4Zub_XLmL1w5-13">
-          <mxGeometry x="-0.1429" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-26" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-6" target="6Raoqn8c_ROnzDJCiVEP-14">
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-7" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-6" target="zZ7NoIVB4Zub_XLmL1w5-13">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-6" value="Check If Second Pointer Already Passed Last Element" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="645" y="310" width="80" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-27" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-14" target="6Raoqn8c_ROnzDJCiVEP-16">
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-12" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-6" target="6Raoqn8c_ROnzDJCiVEP-14">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-31" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-14" target="6Raoqn8c_ROnzDJCiVEP-19">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-6" value="Check If Second Pointer Already Passed Last Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="645" y="410" width="80" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-27" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6Raoqn8c_ROnzDJCiVEP-14" target="6Raoqn8c_ROnzDJCiVEP-16" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-14" value="Check If First Pointer Not Equal With Min Pointer" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="485" y="310" width="80" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-16" target="6Raoqn8c_ROnzDJCiVEP-19">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-31" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6Raoqn8c_ROnzDJCiVEP-14" target="6Raoqn8c_ROnzDJCiVEP-19" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-16" value="Swap" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="465" y="430" width="120" height="60" as="geometry"/>
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-14" value="Check If First Pointer Not Equal With Min Pointer" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="485" y="410" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-19" target="6Raoqn8c_ROnzDJCiVEP-24">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6Raoqn8c_ROnzDJCiVEP-16" target="6Raoqn8c_ROnzDJCiVEP-19" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-19" value="Move First Pointer to&amp;nbsp; Next Element" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="305" y="320" width="120" height="60" as="geometry"/>
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-16" value="Swap First Ponter Element With Min Pointer Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="465" y="520" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-29" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-24" target="QOX-QOyRL-U3UBkbFy3--37">
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-19" target="6Raoqn8c_ROnzDJCiVEP-24">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-24" target="QOX-QOyRL-U3UBkbFy3--20">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="205" y="300"/>
-              <mxPoint x="525" y="300"/>
-            </Array>
-          </mxGeometry>
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-19" value="Move First Pointer to&amp;nbsp; Next Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="420" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-32" value="F" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="6Raoqn8c_ROnzDJCiVEP-30">
-          <mxGeometry x="-0.4971" y="-2" relative="1" as="geometry">
-            <mxPoint x="-63" as="offset"/>
-          </mxGeometry>
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-29" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6Raoqn8c_ROnzDJCiVEP-24" target="QOX-QOyRL-U3UBkbFy3--37" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-24" value="Check If First Pointer Already Passed Last Element" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="165" y="310" width="80" height="80" as="geometry"/>
+        <mxCell id="Jwfi2wtlP983Y6Iz89xG-5" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-24" target="QOX-QOyRL-U3UBkbFy3--20">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-24" value="Check If First Pointer Already Passed Last Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="325" y="310" width="80" height="80" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
