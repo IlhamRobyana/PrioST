@@ -1,6 +1,9 @@
-{
-  "data": [
-    {
+[
+  {
+    "id": 4,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 171.79296875,
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -239,16 +242,13 @@
           "py/id": 18
         },
         {
-          "py/id": 32
+          "py/id": 15
         },
         {
-          "py/id": 29
+          "py/id": 21
         },
         {
-          "py/id": 26
-        },
-        {
-          "py/id": 23
+          "py/id": 18
         },
         {
           "py/id": 32
@@ -261,18 +261,110 @@
         },
         {
           "py/id": 23
-        },
-        {
-          "py/id": 38
-        },
-        {
-          "py/id": 42
         }
       ],
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
-    },
-    {
+    }
+  },
+  {
+    "id": 2,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 171.0625,
+    "test_case": {
+      "data": [],
+      "name": [
+        {
+          "py/id": 5
+        },
+        {
+          "py/id": 12
+        },
+        {
+          "py/id": 21
+        },
+        {
+          "py/id": 18
+        },
+        {
+          "py/id": 32
+        },
+        {
+          "py/id": 29
+        },
+        {
+          "py/id": 26
+        },
+        {
+          "py/id": 23
+        },
+        {
+          "py/id": 15
+        },
+        {
+          "py/id": 21
+        },
+        {
+          "py/id": 18
+        }
+      ],
+      "py/object": "test_generation.test_suite.TestCase",
+      "py/seq": []
+    }
+  },
+  {
+    "id": 0,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 139.6875,
+    "test_case": {
+      "data": [],
+      "name": [
+        {
+          "py/id": 5
+        },
+        {
+          "py/id": 12
+        },
+        {
+          "py/id": 21
+        },
+        {
+          "py/id": 18
+        },
+        {
+          "py/id": 32
+        },
+        {
+          "py/id": 29
+        },
+        {
+          "py/id": 26
+        },
+        {
+          "py/id": 23
+        },
+        {
+          "py/id": 32
+        },
+        {
+          "py/id": 29
+        },
+        {
+          "py/id": 26
+        },
+        {
+          "py/id": 23
+        }
+      ],
+      "py/object": "test_generation.test_suite.TestCase",
+      "py/seq": []
+    }
+  },
+  {
+    "id": 1,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 136.875,
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -311,8 +403,13 @@
       ],
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
-    },
-    {
+    }
+  },
+  {
+    "id": 5,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 135.97283935546875,
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -328,18 +425,6 @@
           "py/id": 18
         },
         {
-          "py/id": 32
-        },
-        {
-          "py/id": 29
-        },
-        {
-          "py/id": 26
-        },
-        {
-          "py/id": 23
-        },
-        {
           "py/id": 15
         },
         {
@@ -347,12 +432,20 @@
         },
         {
           "py/id": 18
+        },
+        {
+          "py/id": 15
         }
       ],
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
-    },
-    {
+    }
+  },
+  {
+    "id": 3,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 61.5,
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -379,79 +472,13 @@
       ],
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
-    },
-    {
-      "data": [],
-      "name": [
-        {
-          "py/id": 5
-        },
-        {
-          "py/id": 12
-        },
-        {
-          "py/id": 21
-        },
-        {
-          "py/id": 18
-        },
-        {
-          "py/id": 15
-        },
-        {
-          "py/id": 21
-        },
-        {
-          "py/id": 18
-        },
-        {
-          "py/id": 32
-        },
-        {
-          "py/id": 29
-        },
-        {
-          "py/id": 26
-        },
-        {
-          "py/id": 23
-        }
-      ],
-      "py/object": "test_generation.test_suite.TestCase",
-      "py/seq": []
-    },
-    {
-      "data": [],
-      "name": [
-        {
-          "py/id": 5
-        },
-        {
-          "py/id": 12
-        },
-        {
-          "py/id": 21
-        },
-        {
-          "py/id": 18
-        },
-        {
-          "py/id": 15
-        },
-        {
-          "py/id": 21
-        },
-        {
-          "py/id": 18
-        },
-        {
-          "py/id": 15
-        }
-      ],
-      "py/object": "test_generation.test_suite.TestCase",
-      "py/seq": []
-    },
-    {
+    }
+  },
+  {
+    "id": 6,
+    "py/object": "__main__.MACOTestCase",
+    "strength": 21.80859375,
+    "test_case": {
       "data": [],
       "name": [
         {
@@ -470,30 +497,5 @@
       "py/object": "test_generation.test_suite.TestCase",
       "py/seq": []
     }
-  ],
-  "name": "BogoSort",
-  "py/object": "test_generation.test_suite.TestSuite",
-  "py/seq": [
-    {
-      "py/id": 2
-    },
-    {
-      "py/id": 46
-    },
-    {
-      "py/id": 49
-    },
-    {
-      "py/id": 52
-    },
-    {
-      "py/id": 55
-    },
-    {
-      "py/id": 58
-    },
-    {
-      "py/id": 61
-    }
-  ]
-}
+  }
+]

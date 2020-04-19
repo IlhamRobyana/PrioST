@@ -177,7 +177,7 @@
                                               "transition_type": "step"
                                             }
                                           ],
-                                          "label": "<font style=\"font-size: 12px\">Check if Second Pointer Already Passed First Element &amp; Key Element is Less Than Second Pointer Element</font>",
+                                          "label": "Check if Second Pointer Already Passed First Element &amp; Key Element is Less Than Second Pointer Element",
                                           "outgoing_transitions": [
                                             {
                                               "py/id": 25
@@ -231,7 +231,7 @@
                             "transition_type": "step"
                           }
                         ],
-                        "label": "<font style=\"font-size: 12px\">Check If First Pointer Already Passed Last Element</font>",
+                        "label": "Check If First Pointer Already Passed Last Element",
                         "outgoing_transitions": [
                           {
                             "py/id": 43

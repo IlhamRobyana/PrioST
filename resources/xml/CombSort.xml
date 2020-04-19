@@ -23,11 +23,6 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--9" value="Assigning Gap Equal to Total Element in Input Number&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="305" y="220" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="UKrnK_VQCFg-LICFfd1x-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="770" y="450" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="Pv9dX6mfEltd3Opco7GE-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QOX-QOyRL-U3UBkbFy3--20" target="Pv9dX6mfEltd3Opco7GE-6" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
@@ -53,19 +48,8 @@
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-13" value="Check If Pointer&amp;nbsp; Element is Less Than Pointer Element After Gap" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="815" y="300" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="UKrnK_VQCFg-LICFfd1x-3" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
-          <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-            <mxPoint x="365" y="410" as="sourcePoint"/>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="250" y="325" width="30" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="UKrnK_VQCFg-LICFfd1x-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="305" y="350" as="sourcePoint"/>
-          </mxGeometry>
         </mxCell>
         <mxCell id="Nh1D3I1_ObbzlYBHciTE-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pv9dX6mfEltd3Opco7GE-6" target="Pv9dX6mfEltd3Opco7GE-14">
           <mxGeometry relative="1" as="geometry"/>
