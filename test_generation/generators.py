@@ -1,6 +1,9 @@
 from test_generation.test_suite import TestSuite, TestCase
 from model.alts import *
 from parse.json_parser import *
+from statistics import mean
+
+tc_length_list = []
 
 
 class TestCaseGenerator:
@@ -23,6 +26,7 @@ class TestCaseGenerator:
         if state.is_leaf() or self.__occurrences(current_path, state) > n:
             tc = TestCase(current_path)
             test_suite.insert(tc)
+            tc_length_list.append(len(current_path) + 1)
         else:
             for neighbor_transition in state.outgoing_transitions:
                 next_path = current_path.copy()
@@ -49,4 +53,11 @@ if __name__ == '__main__':
     ts = TestCaseGenerator().all_n_loop(alts, 1)
     ts.name = file
     JSONParser().save(file + "TestSuite", ts)
+    print("TS Size ", end=' : ')
     print(len(ts))
+    print("Mean TC size", end=' : ')
+    print(mean(tc_length_list))
+    print("Min TC size", end=' : ')
+    print(min(tc_length_list))
+    print("Max TC size", end=' : ')
+    print(max(tc_length_list))

@@ -3,6 +3,8 @@ import random
 from parse.json_parser import *
 from model.alts import *
 from test_generation.test_suite import *
+from test_prioritization.apfd import *
+from test_prioritization.fault import *
 
 
 class MACOTestCase():
@@ -100,11 +102,11 @@ class MACO:
                     decision_transitions[transiton.id] = transiton
 
         ts_length = int(len(ts.data)/2)
+        ts.data = ts.data[0:ts_length]
         for i in range(ts_length):
-            state = alts.initial_state
             tc_id = 0
             if i == 0:
-                tc_id = random.randint(0, ts_length)
+                tc_id = random.randint(0, ts_length - 1)
                 current_tc = ts.data[tc_id]
                 maco_tc = MACOTestCase(tc_id, current_tc)
                 ts.data[tc_id] = None
@@ -115,10 +117,7 @@ class MACO:
             print(tc_id, end=" : ")
             self.__traverse(maco_tc, current_tc)
         maco_ts.sort(key=lambda x: x.strength, reverse=True)
-        JSONParser().save(ts.name + "TestSuite_MACO", maco_ts)
-        for tc in maco_ts:
-            print(tc.id, end=" : ")
-            print(tc.strength)
+        return maco_ts
 
     def __traverse(self, maco_tc, current_tc):
         for i in range(len(current_tc.name)+1):
@@ -134,10 +133,10 @@ class MACO:
             maco_states[id].pheromone += 1/maco_states[id].heuristic
             maco_states[id].heuristic *= 2
 
-            state_weight = len(state.incoming_transitions) + \
+            state_weight = len(state.incoming_transitions) * \
                 len(state.outgoing_transitions)
             if len(state.outgoing_transitions) > 1:
-                state_weight += len(current_tc.name)
+                state_weight += len(current_tc.name) + 1
             state_weight *= maco_states[id].pheromone
 
             maco_tc.strength += state_weight
@@ -153,4 +152,14 @@ if (__name__ == "__main__"):
     ts_file = file + "TestSuite"
     ts = JSONParser().load(ts_file)
 
-    MACO().prioritize(ts, alts)
+    maco_ts = MACO().prioritize(ts, alts)
+    JSONParser().save(ts.name + "TestSuite_MACO", maco_ts)
+    for tc in maco_ts:
+        print(tc.id, end=" : ")
+        print(tc.strength)
+
+    # faults_file_name = file + "Faults"
+    # faults = JSONParser().load(faults_file_name)
+    # apfd = APFD(maco_ts, faults)
+    # apfd_value = apfd.count()
+    # print(apfd_value)
