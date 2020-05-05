@@ -8,7 +8,7 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--5" target="QOX-QOyRL-U3UBkbFy3--7" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="QOX-QOyRL-U3UBkbFy3--5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="QOX-QOyRL-U3UBkbFy3--5" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="95" y="235" width="30" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QOX-QOyRL-U3UBkbFy3--7" target="QOX-QOyRL-U3UBkbFy3--9" edge="1">
@@ -26,7 +26,7 @@
         <mxCell id="Jwfi2wtlP983Y6Iz89xG-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QOX-QOyRL-U3UBkbFy3--10" target="6Raoqn8c_ROnzDJCiVEP-6">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="QOX-QOyRL-U3UBkbFy3--10" value="Move Second Pointer to&amp;nbsp; Next Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="QOX-QOyRL-U3UBkbFy3--10" value="Move Second Pointer to Next Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="790" y="520" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="6Raoqn8c_ROnzDJCiVEP-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--15" target="QOX-QOyRL-U3UBkbFy3--10" edge="1">
@@ -62,13 +62,13 @@
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-13" value="Check If Second Pointer Element is Less Then Min Pointer Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="810" y="410" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+        <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="End" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="95" y="335" width="30" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="Jwfi2wtlP983Y6Iz89xG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7L9kyKC1EE25UCXVwFts-1" target="6Raoqn8c_ROnzDJCiVEP-6">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="7L9kyKC1EE25UCXVwFts-1" value="Assgining Second&amp;nbsp; Pointer with Element Next to First Pointer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7L9kyKC1EE25UCXVwFts-1" value="Assgining Second Pointer with Element Next to First Pointer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="625" y="320" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="Jwfi2wtlP983Y6Iz89xG-7" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-6" target="zZ7NoIVB4Zub_XLmL1w5-13">
@@ -98,7 +98,7 @@
         <mxCell id="Jwfi2wtlP983Y6Iz89xG-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6Raoqn8c_ROnzDJCiVEP-19" target="6Raoqn8c_ROnzDJCiVEP-24">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="6Raoqn8c_ROnzDJCiVEP-19" value="Move First Pointer to&amp;nbsp; Next Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="6Raoqn8c_ROnzDJCiVEP-19" value="Move First Pointer to Next Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="305" y="420" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="6Raoqn8c_ROnzDJCiVEP-29" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6Raoqn8c_ROnzDJCiVEP-24" target="QOX-QOyRL-U3UBkbFy3--37" edge="1">

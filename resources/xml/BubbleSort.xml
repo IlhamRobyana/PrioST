@@ -8,7 +8,7 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--5" target="QOX-QOyRL-U3UBkbFy3--7" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="QOX-QOyRL-U3UBkbFy3--5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="QOX-QOyRL-U3UBkbFy3--5" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="95" y="235" width="30" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QOX-QOyRL-U3UBkbFy3--7" target="QOX-QOyRL-U3UBkbFy3--9" edge="1">
@@ -77,7 +77,7 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--37" value="Result" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="145" y="420" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="zZ7NoIVB4Zub_XLmL1w5-13" value="Check If Second Pointer&amp;nbsp; Element is Less Than Element Next to it" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="zZ7NoIVB4Zub_XLmL1w5-13" value="Check If Second Pointer Element is Less Than Element Next to it" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="655" y="410" width="80" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="EkNXSac3uNQEcbLIMYhI-17" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zZ7NoIVB4Zub_XLmL1w5-15" target="zZ7NoIVB4Zub_XLmL1w5-13" edge="1">
@@ -98,7 +98,7 @@
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-16" value="Check If Swapped Happened This Round" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="325" y="510" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+        <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="End" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="95" y="435" width="30" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="EkNXSac3uNQEcbLIMYhI-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="UKrnK_VQCFg-LICFfd1x-1" target="UKrnK_VQCFg-LICFfd1x-7" edge="1">

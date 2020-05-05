@@ -24,7 +24,7 @@ class TestCaseGenerator:
 
     def __traverse(self, state, current_path, n, test_suite):
         if state.is_leaf() or self.__occurrences(current_path, state) > n:
-            tc = TestCase(current_path)
+            tc = TestCase(len(test_suite) + 1, current_path)
             test_suite.insert(tc)
             tc_length_list.append(len(current_path) + 1)
         else:

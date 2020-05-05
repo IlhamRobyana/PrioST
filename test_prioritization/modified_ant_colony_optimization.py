@@ -8,9 +8,9 @@ from test_prioritization.fault import *
 
 
 class MACOTestCase():
-    def __init__(self, id, tc=None):
-        self.id = id
-        self.strength = 0
+    def __init__(self, name, tc=None):
+        self.name = name
+        self.complexity = 0
         self.test_case = tc
 
 
@@ -52,6 +52,13 @@ class MACO:
             (dest_state.heuristic * 2)
         return dest_state.state
 
+    def __update_divisor(self, parent_state, child_state):
+        parent_state.child_divisor -= child_state.dividend
+        child_state.dividend = child_state.pheromone + \
+            (1/child_state.heuristic)
+        child_state.dividend *= 1/(2*child_state.heuristic)
+        parent_state.child_divisor += child_state.dividend
+
     def __count_probability(self, maco_state, to_state):
         pheromone = to_state.pheromone
         heuristic = to_state.heuristic
@@ -81,7 +88,7 @@ class MACO:
             prob = 0
             dt_count = 0
             if tc is not None:
-                for transition in tc.name:
+                for transition in tc.data:
                     if transition in decision_transitions.values():
                         prob += self.__count_probability(
                             maco_states[transition.from_state.id], maco_states[transition.to_state.id])
@@ -101,7 +108,7 @@ class MACO:
                 for transiton in state.outgoing_transitions:
                     decision_transitions[transiton.id] = transiton
 
-        ts_length = int(len(ts.data)/2)
+        ts_length = int(len(ts.data)/4)
         ts.data = ts.data[0:ts_length]
         for i in range(ts_length):
             tc_id = 0
@@ -113,19 +120,20 @@ class MACO:
             else:
                 tc_id, current_tc = self.__decide_test_case(
                     ts, ts_length, decision_transitions)
+            tc_id += 1
             maco_tc = MACOTestCase(tc_id, current_tc)
             print(tc_id, end=" : ")
             self.__traverse(maco_tc, current_tc)
-        maco_ts.sort(key=lambda x: x.strength, reverse=True)
+        maco_ts.sort(key=lambda x: x.complexity, reverse=True)
         return maco_ts
 
     def __traverse(self, maco_tc, current_tc):
-        for i in range(len(current_tc.name)+1):
-            if i < len(current_tc.name):
-                state = alts.states[current_tc.name[i].from_state.id]
+        for i in range(int(len(current_tc.data)/2)+1):
+            if i < len(current_tc.data)/2:
+                state = alts.states[current_tc.data[i].from_state.id]
                 print(state, end=' - > ')
             else:
-                state = alts.states[current_tc.name[i-1].to_state.id]
+                state = alts.states[current_tc.data[i-1].to_state.id]
                 print(state)
             id = state.id
 
@@ -136,30 +144,32 @@ class MACO:
             state_weight = len(state.incoming_transitions) * \
                 len(state.outgoing_transitions)
             if len(state.outgoing_transitions) > 1:
-                state_weight += len(current_tc.name) + 1
-            state_weight *= maco_states[id].pheromone
+                state_weight += len(current_tc.data) + 1
+                self.__update_divisor(
+                    maco_states[id], maco_states[current_tc.data[i].to_state.id])
+            state_weight += maco_states[id].pheromone
 
-            maco_tc.strength += state_weight
+            maco_tc.complexity += state_weight
 
         maco_ts.append(maco_tc)
 
 
 if (__name__ == "__main__"):
-    print("Type the name of the ALTS file:")
+    print("Type the name of the Graph file:")
     file = str(input())
-    alts = JSONParser().load(file)
+    alts = JSONParser().load("alts/" + file)
 
     ts_file = file + "TestSuite"
-    ts = JSONParser().load(ts_file)
+    ts = JSONParser().load("test_suite/" + ts_file)
 
     maco_ts = MACO().prioritize(ts, alts)
-    JSONParser().save(ts.name + "TestSuite_MACO", maco_ts)
+    JSONParser().save("maco_test_suite/" + ts.name + "TestSuite_MACO", maco_ts)
     for tc in maco_ts:
-        print(tc.id, end=" : ")
-        print(tc.strength)
+        print(tc.name, end=" : ")
+        print(tc.complexity)
 
-    # faults_file_name = file + "Faults"
-    # faults = JSONParser().load(faults_file_name)
-    # apfd = APFD(maco_ts, faults)
-    # apfd_value = apfd.count()
-    # print(apfd_value)
+    faults_file_name = file + "Faults"
+    faults = JSONParser().load("faults/" + faults_file_name)
+    apfd = APFD(maco_ts, faults)
+    apfd_value = apfd.count()
+    print(apfd_value)

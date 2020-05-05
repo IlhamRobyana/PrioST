@@ -1,0 +1,369 @@
+{
+  "initial_state": {
+    "id": "QOX-QOyRL-U3UBkbFy3--5",
+    "incoming_transitions": [],
+    "label": "Start",
+    "outgoing_transitions": [
+      {
+        "from_state": {
+          "py/id": 1
+        },
+        "id": "QOX-QOyRL-U3UBkbFy3--8",
+        "label": "",
+        "py/object": "model.alts.Transition",
+        "to_state": {
+          "id": "QOX-QOyRL-U3UBkbFy3--7",
+          "incoming_transitions": [
+            {
+              "py/id": 4
+            }
+          ],
+          "label": "Input Number",
+          "outgoing_transitions": [
+            {
+              "from_state": {
+                "py/id": 5
+              },
+              "id": "zZ7NoIVB4Zub_XLmL1w5-1",
+              "label": "",
+              "py/object": "model.alts.Transition",
+              "to_state": {
+                "id": "QOX-QOyRL-U3UBkbFy3--9",
+                "incoming_transitions": [
+                  {
+                    "py/id": 8
+                  }
+                ],
+                "label": "Assigning Gap Equal to Total Element in Input Number",
+                "outgoing_transitions": [
+                  {
+                    "from_state": {
+                      "py/id": 9
+                    },
+                    "id": "VvJPW0a8hoe-UFsGQdgW-1",
+                    "label": "",
+                    "py/object": "model.alts.Transition",
+                    "to_state": {
+                      "id": "Pv9dX6mfEltd3Opco7GE-20",
+                      "incoming_transitions": [
+                        {
+                          "py/id": 12
+                        },
+                        {
+                          "from_state": {
+                            "id": "Pv9dX6mfEltd3Opco7GE-14",
+                            "incoming_transitions": [
+                              {
+                                "from_state": {
+                                  "id": "Pv9dX6mfEltd3Opco7GE-6",
+                                  "incoming_transitions": [
+                                    {
+                                      "from_state": {
+                                        "id": "QOX-QOyRL-U3UBkbFy3--20",
+                                        "incoming_transitions": [
+                                          {
+                                            "from_state": {
+                                              "py/id": 13
+                                            },
+                                            "id": "VvJPW0a8hoe-UFsGQdgW-2",
+                                            "label": "",
+                                            "py/object": "model.alts.Transition",
+                                            "to_state": {
+                                              "py/id": 22
+                                            },
+                                            "transition_type": "step"
+                                          }
+                                        ],
+                                        "label": "Assigning Gap With Next Gap Using Shrink Factor",
+                                        "outgoing_transitions": [
+                                          {
+                                            "py/id": 21
+                                          }
+                                        ],
+                                        "py/object": "model.alts.State"
+                                      },
+                                      "id": "Pv9dX6mfEltd3Opco7GE-7",
+                                      "label": "",
+                                      "py/object": "model.alts.Transition",
+                                      "to_state": {
+                                        "py/id": 19
+                                      },
+                                      "transition_type": "step"
+                                    }
+                                  ],
+                                  "label": "Assgining Pointer to First Element",
+                                  "outgoing_transitions": [
+                                    {
+                                      "py/id": 18
+                                    }
+                                  ],
+                                  "py/object": "model.alts.State"
+                                },
+                                "id": "Nh1D3I1_ObbzlYBHciTE-1",
+                                "label": "",
+                                "py/object": "model.alts.Transition",
+                                "to_state": {
+                                  "py/id": 16
+                                },
+                                "transition_type": "step"
+                              },
+                              {
+                                "from_state": {
+                                  "id": "Pv9dX6mfEltd3Opco7GE-9",
+                                  "incoming_transitions": [
+                                    {
+                                      "from_state": {
+                                        "id": "zZ7NoIVB4Zub_XLmL1w5-13",
+                                        "incoming_transitions": [
+                                          {
+                                            "from_state": {
+                                              "py/id": 16
+                                            },
+                                            "id": "Nh1D3I1_ObbzlYBHciTE-5",
+                                            "label": "",
+                                            "py/object": "model.alts.Transition",
+                                            "to_state": {
+                                              "py/id": 31
+                                            },
+                                            "transition_type": "step"
+                                          }
+                                        ],
+                                        "label": "Check If Pointer Element is More Than Pointer Element After Gap",
+                                        "outgoing_transitions": [
+                                          {
+                                            "from_state": {
+                                              "py/id": 31
+                                            },
+                                            "id": "Pv9dX6mfEltd3Opco7GE-10",
+                                            "label": "",
+                                            "py/object": "model.alts.Transition",
+                                            "to_state": {
+                                              "id": "Pv9dX6mfEltd3Opco7GE-8",
+                                              "incoming_transitions": [
+                                                {
+                                                  "py/id": 35
+                                                }
+                                              ],
+                                              "label": "Swap Pointer Element With Pointer Element After Gap",
+                                              "outgoing_transitions": [
+                                                {
+                                                  "from_state": {
+                                                    "py/id": 36
+                                                  },
+                                                  "id": "Pv9dX6mfEltd3Opco7GE-11",
+                                                  "label": "",
+                                                  "py/object": "model.alts.Transition",
+                                                  "to_state": {
+                                                    "py/id": 28
+                                                  },
+                                                  "transition_type": "step"
+                                                }
+                                              ],
+                                              "py/object": "model.alts.State"
+                                            },
+                                            "transition_type": "step"
+                                          },
+                                          {
+                                            "py/id": 30
+                                          }
+                                        ],
+                                        "py/object": "model.alts.State"
+                                      },
+                                      "id": "Nh1D3I1_ObbzlYBHciTE-9",
+                                      "label": "",
+                                      "py/object": "model.alts.Transition",
+                                      "to_state": {
+                                        "py/id": 28
+                                      },
+                                      "transition_type": "step"
+                                    },
+                                    {
+                                      "py/id": 39
+                                    }
+                                  ],
+                                  "label": "Move Pointer to Next Element",
+                                  "outgoing_transitions": [
+                                    {
+                                      "py/id": 27
+                                    }
+                                  ],
+                                  "py/object": "model.alts.State"
+                                },
+                                "id": "Nh1D3I1_ObbzlYBHciTE-2",
+                                "label": "",
+                                "py/object": "model.alts.Transition",
+                                "to_state": {
+                                  "py/id": 16
+                                },
+                                "transition_type": "step"
+                              }
+                            ],
+                            "label": "Check If Pointer Already Passed Last Element",
+                            "outgoing_transitions": [
+                              {
+                                "py/id": 33
+                              },
+                              {
+                                "py/id": 15
+                              }
+                            ],
+                            "py/object": "model.alts.State"
+                          },
+                          "id": "Nh1D3I1_ObbzlYBHciTE-7",
+                          "label": "",
+                          "py/object": "model.alts.Transition",
+                          "to_state": {
+                            "py/id": 13
+                          },
+                          "transition_type": "step"
+                        }
+                      ],
+                      "label": "Check If Swapped Happened This Round Or Gap is Equal to 1",
+                      "outgoing_transitions": [
+                        {
+                          "py/id": 24
+                        },
+                        {
+                          "from_state": {
+                            "py/id": 13
+                          },
+                          "id": "VvJPW0a8hoe-UFsGQdgW-3",
+                          "label": "",
+                          "py/object": "model.alts.Transition",
+                          "to_state": {
+                            "id": "QOX-QOyRL-U3UBkbFy3--37",
+                            "incoming_transitions": [
+                              {
+                                "py/id": 43
+                              }
+                            ],
+                            "label": "Result",
+                            "outgoing_transitions": [
+                              {
+                                "from_state": {
+                                  "py/id": 44
+                                },
+                                "id": "QOX-QOyRL-U3UBkbFy3--43",
+                                "label": "",
+                                "py/object": "model.alts.Transition",
+                                "to_state": {
+                                  "id": "q8Px36Bj9dSwdPajYqEf-1",
+                                  "incoming_transitions": [
+                                    {
+                                      "py/id": 47
+                                    }
+                                  ],
+                                  "label": "End",
+                                  "outgoing_transitions": [],
+                                  "py/object": "model.alts.State"
+                                },
+                                "transition_type": "step"
+                              }
+                            ],
+                            "py/object": "model.alts.State"
+                          },
+                          "transition_type": "step"
+                        }
+                      ],
+                      "py/object": "model.alts.State"
+                    },
+                    "transition_type": "step"
+                  }
+                ],
+                "py/object": "model.alts.State"
+              },
+              "transition_type": "step"
+            }
+          ],
+          "py/object": "model.alts.State"
+        },
+        "transition_type": "step"
+      }
+    ],
+    "py/object": "model.alts.State"
+  },
+  "name": "CombSort",
+  "py/object": "model.alts.ALTS",
+  "states": {
+    "Pv9dX6mfEltd3Opco7GE-14": {
+      "py/id": 16
+    },
+    "Pv9dX6mfEltd3Opco7GE-20": {
+      "py/id": 13
+    },
+    "Pv9dX6mfEltd3Opco7GE-6": {
+      "py/id": 19
+    },
+    "Pv9dX6mfEltd3Opco7GE-8": {
+      "py/id": 36
+    },
+    "Pv9dX6mfEltd3Opco7GE-9": {
+      "py/id": 28
+    },
+    "QOX-QOyRL-U3UBkbFy3--20": {
+      "py/id": 22
+    },
+    "QOX-QOyRL-U3UBkbFy3--37": {
+      "py/id": 44
+    },
+    "QOX-QOyRL-U3UBkbFy3--5": {
+      "py/id": 1
+    },
+    "QOX-QOyRL-U3UBkbFy3--7": {
+      "py/id": 5
+    },
+    "QOX-QOyRL-U3UBkbFy3--9": {
+      "py/id": 9
+    },
+    "q8Px36Bj9dSwdPajYqEf-1": {
+      "py/id": 48
+    },
+    "zZ7NoIVB4Zub_XLmL1w5-13": {
+      "py/id": 31
+    }
+  },
+  "transitions": {
+    "Assgining Pointer to First Element -> (step)  -> Check If Pointer Already Passed Last Element": {
+      "py/id": 18
+    },
+    "Assigning Gap Equal to Total Element in Input Number -> (step)  -> Check If Swapped Happened This Round Or Gap is Equal to 1": {
+      "py/id": 12
+    },
+    "Assigning Gap With Next Gap Using Shrink Factor -> (step)  -> Assgining Pointer to First Element": {
+      "py/id": 21
+    },
+    "Check If Pointer Already Passed Last Element -> (step)  -> Check If Pointer Element is More Than Pointer Element After Gap": {
+      "py/id": 33
+    },
+    "Check If Pointer Already Passed Last Element -> (step)  -> Check If Swapped Happened This Round Or Gap is Equal to 1": {
+      "py/id": 15
+    },
+    "Check If Pointer Element is More Than Pointer Element After Gap -> (step)  -> Move Pointer to Next Element": {
+      "py/id": 30
+    },
+    "Check If Pointer Element is More Than Pointer Element After Gap -> (step)  -> Swap Pointer Element With Pointer Element After Gap": {
+      "py/id": 35
+    },
+    "Check If Swapped Happened This Round Or Gap is Equal to 1 -> (step)  -> Assigning Gap With Next Gap Using Shrink Factor": {
+      "py/id": 24
+    },
+    "Check If Swapped Happened This Round Or Gap is Equal to 1 -> (step)  -> Result": {
+      "py/id": 43
+    },
+    "Input Number -> (step)  -> Assigning Gap Equal to Total Element in Input Number": {
+      "py/id": 8
+    },
+    "Move Pointer to Next Element -> (step)  -> Check If Pointer Already Passed Last Element": {
+      "py/id": 27
+    },
+    "Result -> (step)  -> End": {
+      "py/id": 47
+    },
+    "Start -> (step)  -> Input Number": {
+      "py/id": 4
+    },
+    "Swap Pointer Element With Pointer Element After Gap -> (step)  -> Move Pointer to Next Element": {
+      "py/id": 39
+    }
+  }
+}

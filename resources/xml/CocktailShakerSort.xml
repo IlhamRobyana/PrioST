@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="Electron" modified="2020-04-02T02:23:01.504Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.6.5 Chrome/80.0.3987.86 Electron/8.0.0 Safari/537.36" etag="qRn-1T_YNhOlxFD8_Kfu" version="12.6.5" type="device">
+<mxfile host="Electron" modified="2020-04-21T20:22:20.708Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.6.5 Chrome/80.0.3987.86 Electron/8.0.0 Safari/537.36" etag="mENyDsatcQ2DucC7VosJ" version="12.6.5" type="device">
   <diagram id="KNWanZ54GY8fvMGWVbjZ" name="Page-1">
-    <mxGraphModel dx="1702" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1718" dy="550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="QOX-QOyRL-U3UBkbFy3--5" target="QOX-QOyRL-U3UBkbFy3--7" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="QOX-QOyRL-U3UBkbFy3--5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="QOX-QOyRL-U3UBkbFy3--5" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="95" y="235" width="30" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="zZ7NoIVB4Zub_XLmL1w5-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QOX-QOyRL-U3UBkbFy3--7" target="QOX-QOyRL-U3UBkbFy3--9" edge="1">
@@ -23,7 +23,7 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--9" value="Assigning Left to First Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="305" y="220" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QOX-QOyRL-U3UBkbFy3--20" target="KMTmUzSg7B_6AFODOnJs-43" edge="1">
+        <mxCell id="Crfgo_UbqM5Ax6s5Eycx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QOX-QOyRL-U3UBkbFy3--20" target="KMTmUzSg7B_6AFODOnJs-89">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="QOX-QOyRL-U3UBkbFy3--20" value="Assigning Right to Last Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -37,7 +37,7 @@
         <mxCell id="QOX-QOyRL-U3UBkbFy3--37" value="Result" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="630" y="500" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+        <mxCell id="q8Px36Bj9dSwdPajYqEf-1" value="End" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
           <mxGeometry x="675" y="590" width="30" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-54" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UKrnK_VQCFg-LICFfd1x-7" target="KMTmUzSg7B_6AFODOnJs-49" edge="1">
@@ -53,9 +53,9 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-43" value="Assigning SwappedRight First Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="630" y="220" width="120" height="60" as="geometry"/>
+          <mxGeometry x="800" y="120" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="2gA6yEbHM6oPKovIOuyY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-45" target="KMTmUzSg7B_6AFODOnJs-53">
+        <mxCell id="2gA6yEbHM6oPKovIOuyY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KMTmUzSg7B_6AFODOnJs-45" target="KMTmUzSg7B_6AFODOnJs-53" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-45" value="Assigning First Pointer With Left" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -64,7 +64,7 @@
         <mxCell id="KMTmUzSg7B_6AFODOnJs-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-49" target="KMTmUzSg7B_6AFODOnJs-51" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-49" value="Swap First Pointer&amp;nbsp; Element Wtih Element Next to it&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="KMTmUzSg7B_6AFODOnJs-49" value="Swap First Pointer Element Wtih Element Next to it" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1120" y="315" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-51" target="KMTmUzSg7B_6AFODOnJs-55" edge="1">
@@ -79,7 +79,7 @@
         <mxCell id="KMTmUzSg7B_6AFODOnJs-62" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-53" target="KMTmUzSg7B_6AFODOnJs-61" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-53" value="Check If First Pointer Already Passed Last Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="KMTmUzSg7B_6AFODOnJs-53" value="Check If First Pointer Already Passed Right Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="820" y="305" width="80" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-55" target="KMTmUzSg7B_6AFODOnJs-53" edge="1">
@@ -97,10 +97,10 @@
         <mxCell id="KMTmUzSg7B_6AFODOnJs-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-63" target="KMTmUzSg7B_6AFODOnJs-65" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-63" value="Assigning SwappedLeft With Total Last Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="KMTmUzSg7B_6AFODOnJs-63" value="Assigning SwappedLeft With Last Element" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="465" y="315" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="2gA6yEbHM6oPKovIOuyY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-65" target="KMTmUzSg7B_6AFODOnJs-69">
+        <mxCell id="2gA6yEbHM6oPKovIOuyY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KMTmUzSg7B_6AFODOnJs-65" target="KMTmUzSg7B_6AFODOnJs-69" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-65" value="Assigning Second Pointer With Right" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -109,7 +109,7 @@
         <mxCell id="KMTmUzSg7B_6AFODOnJs-80" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-68" target="KMTmUzSg7B_6AFODOnJs-70" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-84" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KMTmUzSg7B_6AFODOnJs-68" target="KMTmUzSg7B_6AFODOnJs-73" edge="1">
+        <mxCell id="Crfgo_UbqM5Ax6s5Eycx-4" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-68" target="KMTmUzSg7B_6AFODOnJs-74">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-68" value="Check If Second Pointer Element Less Than Element Before it" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -121,26 +121,26 @@
         <mxCell id="KMTmUzSg7B_6AFODOnJs-88" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-69" target="KMTmUzSg7B_6AFODOnJs-87" edge="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-69" value="Check If Second Pointer Already Passed&amp;nbsp; Before First Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="KMTmUzSg7B_6AFODOnJs-69" value="Check If Second Pointer Already Passed Before Left Element" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="325" y="395" width="80" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KMTmUzSg7B_6AFODOnJs-70" target="KMTmUzSg7B_6AFODOnJs-74" edge="1">
+        <mxCell id="Crfgo_UbqM5Ax6s5Eycx-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-70" target="KMTmUzSg7B_6AFODOnJs-73">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-70" value="Swap Second Pointer Element With Element Before it&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="KMTmUzSg7B_6AFODOnJs-70" value="Swap Second Pointer Element With Element Before it" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-30" y="405" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-73" target="KMTmUzSg7B_6AFODOnJs-69" edge="1">
+        <mxCell id="Crfgo_UbqM5Ax6s5Eycx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-73" target="KMTmUzSg7B_6AFODOnJs-74">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-73" value="Assigning SwappedLeft With Second Pointer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="145" y="500" width="120" height="60" as="geometry"/>
+          <mxGeometry x="-30" y="500" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-74" target="KMTmUzSg7B_6AFODOnJs-73" edge="1">
+        <mxCell id="Crfgo_UbqM5Ax6s5Eycx-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-74" target="KMTmUzSg7B_6AFODOnJs-69">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-74" value="Move Second Pointer to Element Before it" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-30" y="500" width="120" height="60" as="geometry"/>
+          <mxGeometry x="145" y="500" width="120" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-87" target="KMTmUzSg7B_6AFODOnJs-89" edge="1">
           <mxGeometry relative="1" as="geometry"/>
@@ -148,12 +148,10 @@
         <mxCell id="KMTmUzSg7B_6AFODOnJs-87" value="Assigning Left with SwappedLeft" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="465" y="405" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="KMTmUzSg7B_6AFODOnJs-90" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="KMTmUzSg7B_6AFODOnJs-89" target="KMTmUzSg7B_6AFODOnJs-43" edge="1">
-          <mxGeometry x="-0.7391" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-92" value="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KMTmUzSg7B_6AFODOnJs-89" target="QOX-QOyRL-U3UBkbFy3--37" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="Crfgo_UbqM5Ax6s5Eycx-7" value="T" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KMTmUzSg7B_6AFODOnJs-89" target="KMTmUzSg7B_6AFODOnJs-43">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="KMTmUzSg7B_6AFODOnJs-89" value="Check If Left Less Than Right" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">

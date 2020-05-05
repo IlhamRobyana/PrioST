@@ -6,8 +6,8 @@ from test_prioritization.fault import *
 
 
 class PCTestCase:
-    def __init__(self, id):
-        self.id = id
+    def __init__(self, name):
+        self.name = name
         self.complexity = 0
         self.number = 0
         self.weight = 0
@@ -19,15 +19,15 @@ class PCTestCase:
 class PathComplexity:
     def prioritize(self, ts, alts):
         pc_ts = []
-        for i in range(int(len(ts.data)/2)):
-            pc_tc = PCTestCase(i)
-            print(i, end=" : ")
-            for j in range(len(ts.data[i].name)+1):
-                if j < len(ts.data[i].name):
-                    state = alts.states[ts.data[i].name[j].from_state.id]
+        for i in range(int(len(ts.data)/4)):
+            pc_tc = PCTestCase(i+1)
+            print(i + 1, end=" : ")
+            for j in range(int(len(ts.data[i].data)/2)+1):
+                if j < len(ts.data[i].data)/2:
+                    state = alts.states[ts.data[i].data[j].from_state.id]
                     print(state, end=' - > ')
                 else:
-                    state = alts.states[ts.data[i].name[j-1].to_state.id]
+                    state = alts.states[ts.data[i].data[j-1].to_state.id]
                     print(state)
                 pc_tc.number += 1
                 pc_tc.weight += len(state.incoming_transitions) * \
@@ -46,21 +46,25 @@ class PathComplexity:
 
 
 if (__name__ == "__main__"):
-    print("Type the name of the ALTS file:")
+    print("Type the name of the Graph file:")
     file = str(input())
-    alts = JSONParser().load(file)
+    alts = JSONParser().load("alts/" + file)
 
     ts_file = file + "TestSuite"
-    ts = JSONParser().load(ts_file)
+    ts = JSONParser().load("test_suite/"+ts_file)
 
     pc_ts = PathComplexity().prioritize(ts, alts)
-    JSONParser().save(ts.name + "TestSuite_PC", pc_ts)
+    JSONParser().save("pc_test_suite/" + ts.name + "TestSuite_PC", pc_ts)
     for tc in pc_ts:
-        print(tc.id, end=" : ")
-        print(tc.complexity)
+        print(tc.name, end=" : ")
+        print(tc.complexity, end=", ")
+        print(tc.number, end=", ")
+        print(tc.weight, end=", ")
+        print(tc.predicate, end=", ")
+        print(tc.conditions,)
 
-    # faults_file_name = file + "Faults"
-    # faults = JSONParser().load(faults_file_name)
-    # apfd = APFD(pc_ts, faults)
-    # apfd_value = apfd.count()
-    # print(apfd_value)
+    faults_file_name = file + "ShortTCFaults"
+    faults = JSONParser().load("faults/" + faults_file_name)
+    apfd = APFD(pc_ts, faults)
+    apfd_value = apfd.count()
+    print(apfd_value)
