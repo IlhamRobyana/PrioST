@@ -76,8 +76,12 @@ class EdgeParser(xml.sax.ContentHandler):
             if attributes.get("edge") == "1":
                 source = attributes.get("source")
                 target = attributes.get("target")
-                alts.add_transition(Transition(
-                    states[source], id, '', states[target], 'step'))
+                transition = Transition(
+                    states[source], id, '', states[target], 'step')
+                alts.add_transition(transition)
+                print(len(alts.transitions))
+                print(transition.id)
+                print(transition)
 
 
 if (__name__ == "__main__"):
