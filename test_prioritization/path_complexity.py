@@ -5,17 +5,6 @@ from test_prioritization.apfd import *
 from test_prioritization.fault import *
 
 
-class PCTestCase:
-    def __init__(self, name):
-        self.name = name
-        self.complexity = 0
-        self.number = 0
-        self.weight = 0
-        self.predicate = 0
-        self.conditions = 0
-        self.test_case = TestCase
-
-
 class PathComplexity:
     def prioritize(self, ts, alts):
         pc_ts = []
@@ -54,6 +43,7 @@ if (__name__ == "__main__"):
     ts = JSONParser().load("test_suite/"+ts_file)
 
     pc_ts = PathComplexity().prioritize(ts, alts)
+    pc_ts = TestSuite(ts.name, pc_ts)
     JSONParser().save("pc_test_suite/" + ts.name + "TestSuite_PC", pc_ts)
     for tc in pc_ts:
         print(tc.name, end=" : ")
@@ -61,10 +51,4 @@ if (__name__ == "__main__"):
         print(tc.number, end=", ")
         print(tc.weight, end=", ")
         print(tc.predicate, end=", ")
-        print(tc.conditions,)
-
-    faults_file_name = file + "ShortTCFaults"
-    faults = JSONParser().load("faults/" + faults_file_name)
-    apfd = APFD(pc_ts, faults)
-    apfd_value = apfd.count()
-    print(apfd_value)
+        print(tc.conditions)

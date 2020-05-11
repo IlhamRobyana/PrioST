@@ -6,24 +6,6 @@ from test_generation.test_suite import *
 from test_prioritization.apfd import *
 from test_prioritization.fault import *
 
-
-class MACOTestCase():
-    def __init__(self, name, tc=None):
-        self.name = name
-        self.complexity = 0
-        self.test_case = tc
-
-
-class MACOState():
-    def __init__(self, state):
-        self.pheromone = 1
-        self.heuristic = 2
-        self.visited = 0
-        self.state = state
-        self.dividend = self.pheromone / self.heuristic
-        self.child_divisor = (1/2) * len(state.outgoing_transitions)
-
-
 ts = None
 alts = None
 maco_ts = []
@@ -141,16 +123,16 @@ class MACO:
             maco_states[id].pheromone += 1/maco_states[id].heuristic
             maco_states[id].heuristic *= 2
 
-            state_weight = len(state.incoming_transitions) * \
+            maco_tc.weight += len(state.incoming_transitions) * \
                 len(state.outgoing_transitions)
+            self.__update_divisor(
+                maco_states[id], maco_states[current_tc.data[i].to_state.id])
             if len(state.outgoing_transitions) > 1:
-                state_weight += len(current_tc.data) + 1
-                self.__update_divisor(
-                    maco_states[id], maco_states[current_tc.data[i].to_state.id])
-            state_weight += maco_states[id].pheromone
-
-            maco_tc.complexity += state_weight
-
+                maco_tc.predicate += 1
+            maco_tc.pheromone += maco_states[id].pheromone
+            maco_tc.number += 1
+        maco_tc.complexity = maco_tc.predicate * maco_tc.number
+        maco_tc.complexity += maco_tc.pheromone + maco_tc.weight
         maco_ts.append(maco_tc)
 
 
@@ -163,13 +145,12 @@ if (__name__ == "__main__"):
     ts = JSONParser().load("test_suite/" + ts_file)
 
     maco_ts = MACO().prioritize(ts, alts)
+    maco_ts = TestSuite(ts.name, maco_ts)
     JSONParser().save("maco_test_suite/" + ts.name + "TestSuite_MACO", maco_ts)
     for tc in maco_ts:
         print(tc.name, end=" : ")
-        print(tc.complexity)
-
-    faults_file_name = file + "Faults"
-    faults = JSONParser().load("faults/" + faults_file_name)
-    apfd = APFD(maco_ts, faults)
-    apfd_value = apfd.count()
-    print(apfd_value)
+        print(tc.complexity, end=", ")
+        print(tc.pheromone, end=", ")
+        print(tc.weight, end=", ")
+        print(tc.number, end=", ")
+        print(tc.predicate)
