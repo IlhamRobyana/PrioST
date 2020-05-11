@@ -1,4 +1,7 @@
 from parse.json_parser import *
+from parse.xlsx_parser import *
+from test_generation.test_suite import *
+from test_prioritization import *
 
 
 class APFD():
@@ -11,32 +14,47 @@ class APFD():
         self.value = 0
         fault_detected = 0
         tc_checked = 0
-        while fault_detected < len(self.faults) and tc_checked < len(self.test_suite):
+        tc_order = []
+        while tc_checked < len(self.test_suite):
             tc = self.test_suite[tc_checked]
             for fault in self.faults:
                 if tc.name in fault.tc_list and not fault.detected:
                     self.value += tc_checked + 1
                     fault.detected = True
                     fault_detected += 1
-            print(self.value)
+            tc_order.append(str(tc.name))
             tc_checked += 1
         self.value /= len(self.faults) * len(self.test_suite)
         self.value += 1/(2 * len(self.test_suite))
         self.value = 1 - self.value
-        return self.value
+        return self.value, tc_order
 
 
 if (__name__ == "__main__"):
     print("Type the name of the TestSuite file:")
     file = str(input())
-    ts = JSONParser().load("test_suite/" + file)
+    print("Type the name of the suffix:")
+    suffix = str(input())
 
-    print("Type the name of the Fault file:")
-    file = str(input())
-    faults = JSONParser().load("faults/" + file)
+    if suffix == "_PC":
+        directory = "pc_test_suite/"
+    elif suffix == "_MACO":
+        directory = "maco_test_suite/"
+    elif suffix == "_Optimal":
+        directory = "optimal_test_suite/"
+    else:
+        directory = "test_suite/"
+    ts = JSONParser().load(directory + file + "TestSuite" + suffix)
 
-    ts_length = int(len(ts.data)/4)
+    print("Type the name of the Fault:")
+    fault_suffix = str(input())
+    faults = JSONParser().load("faults/" + file + fault_suffix + "Faults")
+
+    if isinstance(ts.data[0], TestCase):
+        ts_length = int(len(ts.data)/4)
+    else:
+        ts_length = int(len(ts.data)/2)
     ts.data = ts.data[0:ts_length]
-    print(len(ts.data))
     apfd = APFD(ts, faults)
-    print(apfd.count())
+    apfd_value, tc_order = apfd.count()
+    XLSXParser().write(file, suffix, fault_suffix, apfd_value, tc_order)

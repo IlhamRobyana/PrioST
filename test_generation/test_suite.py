@@ -22,3 +22,35 @@ class TestSuite(UserList):
     def insert(self, test_case, position=-1):
         if isinstance(test_case, TestCase):
             super().insert(position, test_case)
+
+
+class PCTestCase:
+    def __init__(self, name, tc=None):
+        self.name = name
+        self.complexity = 0
+        self.number = 0
+        self.weight = 0
+        self.predicate = 0
+        self.conditions = 0
+        self.test_case = tc
+
+
+class MACOTestCase:
+    def __init__(self, name, tc=None):
+        self.name = name
+        self.complexity = 0
+        self.number = 0
+        self.weight = 0
+        self.predicate = 0
+        self.pheromone = 0
+        self.test_case = tc
+
+
+class MACOState:
+    def __init__(self, state):
+        self.pheromone = 1
+        self.heuristic = 2
+        self.visited = 0
+        self.state = state
+        self.dividend = self.pheromone / self.heuristic
+        self.child_divisor = (1/2) * len(state.outgoing_transitions)
