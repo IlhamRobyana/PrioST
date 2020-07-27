@@ -17,6 +17,7 @@ class APFD():
         tc_order = []
         while tc_checked < len(self.test_suite):
             tc = self.test_suite[tc_checked]
+            print(len(self.test_suite))
             for fault in self.faults:
                 if tc.name in fault.tc_list and not fault.detected:
                     self.value += tc_checked + 1
@@ -35,6 +36,8 @@ if (__name__ == "__main__"):
     file = str(input())
     print("Type the name of the suffix:")
     suffix = str(input())
+    print("Type the suffix of the Fault:")
+    fault_suffix = str(input())
 
     if suffix == "_PC":
         directory = "pc_test_suite/"
@@ -44,13 +47,14 @@ if (__name__ == "__main__"):
         directory = "optimal_test_suite/"
     else:
         directory = "test_suite/"
-    ts = JSONParser().load(directory + file + "TestSuite" + suffix)
+    if suffix == "_Optimal":
+        ts = JSONParser().load(directory + file + "TestSuite" + suffix + "_" + fault_suffix)
+    else:
+        ts = JSONParser().load(directory + file + "TestSuite" + suffix)
 
-    print("Type the name of the Fault:")
-    fault_suffix = str(input())
     faults = JSONParser().load("faults/" + file + fault_suffix + "Faults")
 
-    if isinstance(ts.data[0], TestCase):
+    if suffix == "":
         ts_length = int(len(ts.data)/4)
     else:
         ts_length = int(len(ts.data)/2)

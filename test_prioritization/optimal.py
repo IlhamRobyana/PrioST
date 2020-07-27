@@ -41,23 +41,25 @@ class Optimal:
                 sorted_list = sorted(unsorted_list, key=lambda i: len(
                     i['fault_list']), reverse=True)
                 tc_list.extend(sorted_list)
-        return tc_list
+        opt_ts = TestSuite(ts.name)
+        for i in range(len(tc_list)):
+            tc = TestCase(tc_list[i]['name'], tc_list[i]['test_case'])
+            opt_ts.append(tc)
+        return opt_ts
 
 
 if (__name__ == "__main__"):
     print("Type the name of the TestSuite file:")
     file = str(input())
-    ts = JSONParser().load("test_suite/" + file)
+    ts = JSONParser().load("test_suite/" + file + "TestSuite")
 
-    print("Type the name of the Fault file:")
-    file = str(input())
-    faults = JSONParser().load("faults/" + file)
+    print("Type the suffix of the Fault file:")
+    suffix = str(input())
+    faults = JSONParser().load("faults/" + file + suffix + "Faults")
 
     ts_length = int(len(ts.data)/4)
     ts.data = ts.data[0:ts_length]
     print(len(ts.data))
     optimal_ts = Optimal().prioritize(ts, faults)
-    JSONParser().save("optimal_test_suite/" + ts.name + "TestSuite_Optimal", optimal_ts)
-    for tc in optimal_ts:
-        print(tc['name'], end=" : ")
-        print(tc['fault_list'])
+    JSONParser().save("optimal_test_suite/" + ts.name +
+                      "TestSuite_Optimal_" + suffix, optimal_ts)
