@@ -17,7 +17,6 @@ class APFD():
         tc_order = []
         while tc_checked < len(self.test_suite):
             tc = self.test_suite[tc_checked]
-            print(len(self.test_suite))
             for fault in self.faults:
                 if tc.name in fault.tc_list and not fault.detected:
                     self.value += tc_checked + 1
@@ -25,9 +24,13 @@ class APFD():
                     fault_detected += 1
             tc_order.append(str(tc.name))
             tc_checked += 1
+        print(self.value)
         self.value /= len(self.faults) * len(self.test_suite)
+        print(self.value)
         self.value += 1/(2 * len(self.test_suite))
+        print(self.value)
         self.value = 1 - self.value
+        print(self.value)
         return self.value, tc_order
 
 
@@ -38,6 +41,8 @@ if (__name__ == "__main__"):
     suffix = str(input())
     print("Type the suffix of the Fault:")
     fault_suffix = str(input())
+    print("Type the number of iterations:")
+    iterations = int(input())
 
     if suffix == "_PC":
         directory = "pc_test_suite/"
@@ -48,17 +53,21 @@ if (__name__ == "__main__"):
     else:
         directory = "test_suite/"
     if suffix == "_Optimal":
-        ts = JSONParser().load(directory + file + "TestSuite" + suffix + "_" + fault_suffix)
+        ts_string = directory + file + "TestSuite" + suffix + "_" + fault_suffix
     else:
-        ts = JSONParser().load(directory + file + "TestSuite" + suffix)
+        ts_string = directory + file + "TestSuite" + suffix
 
-    faults = JSONParser().load("faults/" + file + fault_suffix + "Faults")
-
-    if suffix == "":
-        ts_length = int(len(ts.data)/4)
-    else:
-        ts_length = int(len(ts.data)/2)
-    ts.data = ts.data[0:ts_length]
-    apfd = APFD(ts, faults)
-    apfd_value, tc_order = apfd.count()
-    XLSXParser().write(file, suffix, fault_suffix, apfd_value, tc_order)
+    for i in range(iterations):
+        if suffix == "_MACO":
+            ts = JSONParser().load(ts_string + str(i))
+        else:
+            ts = JSONParser().load(ts_string)
+        if suffix == "":
+            ts_length = int(len(ts.data)/4)
+        else:
+            ts_length = int(len(ts.data)/2)
+        ts.data = ts.data[0:ts_length]
+        faults = JSONParser().load("faults/" + file + fault_suffix + "Faults")
+        apfd = APFD(ts, faults)
+        apfd_value, tc_order = apfd.count()
+        XLSXParser().write(file, suffix, fault_suffix, apfd_value, tc_order)

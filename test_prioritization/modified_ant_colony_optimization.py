@@ -104,7 +104,7 @@ class MACO:
                     ts, ts_length, decision_transitions)
             tc_id += 1
             maco_tc = MACOTestCase(tc_id, current_tc)
-            print(tc_id, end=" : ")
+            # print(tc_id, end=" : ")
             self.__traverse(maco_tc, current_tc)
         maco_ts.sort(key=lambda x: x.complexity, reverse=True)
         return maco_ts
@@ -113,10 +113,10 @@ class MACO:
         for i in range(int(len(current_tc.data)/2)+1):
             if i < len(current_tc.data)/2:
                 state = alts.states[current_tc.data[i].from_state.id]
-                print(state, end=' - > ')
+                # print(state, end=' - > ')
             else:
                 state = alts.states[current_tc.data[i-1].to_state.id]
-                print(state)
+                # print(state)
             id = state.id
 
             maco_states[id].visited += 1
@@ -139,18 +139,23 @@ class MACO:
 if (__name__ == "__main__"):
     print("Type the name of the Graph file:")
     file = str(input())
-    alts = JSONParser().load("alts/" + file)
 
-    ts_file = file + "TestSuite"
-    ts = JSONParser().load("test_suite/" + ts_file)
+    print("Type the number of iterations:")
+    iteration = int(input())
 
-    maco_ts = MACO().prioritize(ts, alts)
-    maco_ts = TestSuite(ts.name, maco_ts)
-    JSONParser().save("maco_test_suite/" + ts.name + "TestSuite_MACO", maco_ts)
-    for tc in maco_ts:
-        print(tc.name, end=" : ")
-        print(tc.complexity, end=", ")
-        print(tc.pheromone, end=", ")
-        print(tc.weight, end=", ")
-        print(tc.number, end=", ")
-        print(tc.predicate)
+    for i in range(iteration):
+        alts = JSONParser().load("alts/" + file)
+
+        ts_file = file + "TestSuite"
+        ts = JSONParser().load("test_suite/" + ts_file)
+        maco_ts = []
+        maco_ts = MACO().prioritize(ts, alts)
+        maco_ts = TestSuite(ts.name, maco_ts)
+        JSONParser().save("maco_test_suite/" + ts.name + "TestSuite_MACO" + str(i), maco_ts)
+    # for tc in maco_ts:
+    #     print(tc.name, end=" : ")
+    #     print(tc.complexity, end=", ")
+    #     print(tc.pheromone, end=", ")
+    #     print(tc.weight, end=", ")
+    #     print(tc.number, end=", ")
+    #     print(tc.predicate)
