@@ -1,0 +1,270 @@
+{
+  "initial_state": {
+    "id": "ip-kZnzisqJbh3x0XzLj-3",
+    "incoming_transitions": [],
+    "label": "Start",
+    "outgoing_transitions": [
+      {
+        "from_state": {
+          "py/id": 1
+        },
+        "id": "ip-kZnzisqJbh3x0XzLj-2",
+        "label": "",
+        "py/object": "model.alts.Transition",
+        "to_state": {
+          "id": "ip-kZnzisqJbh3x0XzLj-5",
+          "incoming_transitions": [
+            {
+              "py/id": 4
+            }
+          ],
+          "label": "N1",
+          "outgoing_transitions": [
+            {
+              "from_state": {
+                "py/id": 5
+              },
+              "id": "ip-kZnzisqJbh3x0XzLj-4",
+              "label": "",
+              "py/object": "model.alts.Transition",
+              "to_state": {
+                "id": "ip-kZnzisqJbh3x0XzLj-8",
+                "incoming_transitions": [
+                  {
+                    "py/id": 8
+                  }
+                ],
+                "label": "D1",
+                "outgoing_transitions": [
+                  {
+                    "from_state": {
+                      "py/id": 9
+                    },
+                    "id": "ip-kZnzisqJbh3x0XzLj-6",
+                    "label": "",
+                    "py/object": "model.alts.Transition",
+                    "to_state": {
+                      "id": "ip-kZnzisqJbh3x0XzLj-10",
+                      "incoming_transitions": [
+                        {
+                          "py/id": 12
+                        }
+                      ],
+                      "label": "N2",
+                      "outgoing_transitions": [
+                        {
+                          "from_state": {
+                            "py/id": 13
+                          },
+                          "id": "ip-kZnzisqJbh3x0XzLj-9",
+                          "label": "",
+                          "py/object": "model.alts.Transition",
+                          "to_state": {
+                            "id": "ip-kZnzisqJbh3x0XzLj-12",
+                            "incoming_transitions": [
+                              {
+                                "py/id": 16
+                              }
+                            ],
+                            "label": "N3",
+                            "outgoing_transitions": [
+                              {
+                                "from_state": {
+                                  "py/id": 17
+                                },
+                                "id": "ip-kZnzisqJbh3x0XzLj-11",
+                                "label": "",
+                                "py/object": "model.alts.Transition",
+                                "to_state": {
+                                  "id": "ip-kZnzisqJbh3x0XzLj-19",
+                                  "incoming_transitions": [
+                                    {
+                                      "py/id": 20
+                                    },
+                                    {
+                                      "from_state": {
+                                        "id": "ip-kZnzisqJbh3x0XzLj-17",
+                                        "incoming_transitions": [
+                                          {
+                                            "from_state": {
+                                              "id": "ip-kZnzisqJbh3x0XzLj-14",
+                                              "incoming_transitions": [
+                                                {
+                                                  "from_state": {
+                                                    "py/id": 9
+                                                  },
+                                                  "id": "ip-kZnzisqJbh3x0XzLj-7",
+                                                  "label": "",
+                                                  "py/object": "model.alts.Transition",
+                                                  "to_state": {
+                                                    "py/id": 27
+                                                  },
+                                                  "transition_type": "step"
+                                                },
+                                                {
+                                                  "from_state": {
+                                                    "py/id": 24
+                                                  },
+                                                  "id": "ip-kZnzisqJbh3x0XzLj-16",
+                                                  "label": "",
+                                                  "py/object": "model.alts.Transition",
+                                                  "to_state": {
+                                                    "py/id": 27
+                                                  },
+                                                  "transition_type": "step"
+                                                }
+                                              ],
+                                              "label": "N4",
+                                              "outgoing_transitions": [
+                                                {
+                                                  "py/id": 26
+                                                }
+                                              ],
+                                              "py/object": "model.alts.State"
+                                            },
+                                            "id": "ip-kZnzisqJbh3x0XzLj-13",
+                                            "label": "",
+                                            "py/object": "model.alts.Transition",
+                                            "to_state": {
+                                              "py/id": 24
+                                            },
+                                            "transition_type": "step"
+                                          }
+                                        ],
+                                        "label": "D2",
+                                        "outgoing_transitions": [
+                                          {
+                                            "py/id": 23
+                                          },
+                                          {
+                                            "py/id": 30
+                                          }
+                                        ],
+                                        "py/object": "model.alts.State"
+                                      },
+                                      "id": "ip-kZnzisqJbh3x0XzLj-15",
+                                      "label": "",
+                                      "py/object": "model.alts.Transition",
+                                      "to_state": {
+                                        "py/id": 21
+                                      },
+                                      "transition_type": "step"
+                                    }
+                                  ],
+                                  "label": "N5",
+                                  "outgoing_transitions": [
+                                    {
+                                      "from_state": {
+                                        "py/id": 21
+                                      },
+                                      "id": "ip-kZnzisqJbh3x0XzLj-18",
+                                      "label": "",
+                                      "py/object": "model.alts.Transition",
+                                      "to_state": {
+                                        "id": "ip-kZnzisqJbh3x0XzLj-20",
+                                        "incoming_transitions": [
+                                          {
+                                            "py/id": 34
+                                          }
+                                        ],
+                                        "label": "End",
+                                        "outgoing_transitions": [],
+                                        "py/object": "model.alts.State"
+                                      },
+                                      "transition_type": "step"
+                                    }
+                                  ],
+                                  "py/object": "model.alts.State"
+                                },
+                                "transition_type": "step"
+                              }
+                            ],
+                            "py/object": "model.alts.State"
+                          },
+                          "transition_type": "step"
+                        }
+                      ],
+                      "py/object": "model.alts.State"
+                    },
+                    "transition_type": "step"
+                  },
+                  {
+                    "py/id": 29
+                  }
+                ],
+                "py/object": "model.alts.State"
+              },
+              "transition_type": "step"
+            }
+          ],
+          "py/object": "model.alts.State"
+        },
+        "transition_type": "step"
+      }
+    ],
+    "py/object": "model.alts.State"
+  },
+  "name": "Illust",
+  "py/object": "model.alts.ALTS",
+  "states": {
+    "ip-kZnzisqJbh3x0XzLj-10": {
+      "py/id": 13
+    },
+    "ip-kZnzisqJbh3x0XzLj-12": {
+      "py/id": 17
+    },
+    "ip-kZnzisqJbh3x0XzLj-14": {
+      "py/id": 27
+    },
+    "ip-kZnzisqJbh3x0XzLj-17": {
+      "py/id": 24
+    },
+    "ip-kZnzisqJbh3x0XzLj-19": {
+      "py/id": 21
+    },
+    "ip-kZnzisqJbh3x0XzLj-20": {
+      "py/id": 35
+    },
+    "ip-kZnzisqJbh3x0XzLj-3": {
+      "py/id": 1
+    },
+    "ip-kZnzisqJbh3x0XzLj-5": {
+      "py/id": 5
+    },
+    "ip-kZnzisqJbh3x0XzLj-8": {
+      "py/id": 9
+    }
+  },
+  "transitions": {
+    "D1 -> (step)  -> N2": {
+      "py/id": 12
+    },
+    "D1 -> (step)  -> N4": {
+      "py/id": 29
+    },
+    "D2 -> (step)  -> N4": {
+      "py/id": 30
+    },
+    "D2 -> (step)  -> N5": {
+      "py/id": 23
+    },
+    "N1 -> (step)  -> D1": {
+      "py/id": 8
+    },
+    "N2 -> (step)  -> N3": {
+      "py/id": 16
+    },
+    "N3 -> (step)  -> N5": {
+      "py/id": 20
+    },
+    "N4 -> (step)  -> D2": {
+      "py/id": 26
+    },
+    "N5 -> (step)  -> End": {
+      "py/id": 34
+    },
+    "Start -> (step)  -> N1": {
+      "py/id": 4
+    }
+  }
+}

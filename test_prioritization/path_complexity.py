@@ -10,14 +10,14 @@ class PathComplexity:
         pc_ts = []
         for i in range(int(len(ts.data)/4)):
             pc_tc = PCTestCase(i+1)
-            # print(i + 1, end=" : ")
+            print(i + 1, end=" : ")
             for j in range(int(len(ts.data[i].data)/2)+1):
                 if j < len(ts.data[i].data)/2:
                     state = alts.states[ts.data[i].data[j].from_state.id]
-                    # print(state, end=' - > ')
+                    print(state, end=' - > ')
                 else:
                     state = alts.states[ts.data[i].data[j-1].to_state.id]
-                    # print(state)
+                    print(state)
                 pc_tc.number += 1
                 pc_tc.weight += len(state.incoming_transitions) * \
                     len(state.outgoing_transitions)
@@ -48,11 +48,13 @@ if (__name__ == "__main__"):
     for i in range(iterations):
         pc_ts = PathComplexity().prioritize(ts, alts)
         pc_ts = TestSuite(ts.name, pc_ts)
+        # JSONParser().save("pc_test_suite/" + ts.name + "TestSuite_PC", pc_ts)
         JSONParser().save("pc_test_suite/" + ts.name + "TestSuite_PC" + str(i), pc_ts)
-    # for tc in pc_ts:
-    #     print(tc.name, end=" : ")
-    #     print(tc.complexity, end=", ")
-    #     print(tc.number, end=", ")
-    #     print(tc.weight, end=", ")
-    #     print(tc.predicate, end=", ")
-    #     print(tc.conditions)
+
+    for tc in pc_ts:
+        print(tc.name, end=" : ")
+        print(tc.complexity, end=", ")
+        print(tc.number, end=", ")
+        print(tc.weight, end=", ")
+        print(tc.predicate, end=", ")
+        print(tc.conditions)

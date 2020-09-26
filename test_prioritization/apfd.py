@@ -24,13 +24,13 @@ class APFD():
                     fault_detected += 1
             tc_order.append(str(tc.name))
             tc_checked += 1
-        print(self.value)
+        # print(self.value)
         self.value /= len(self.faults) * len(self.test_suite)
-        print(self.value)
+        # print(self.value)
         self.value += 1/(2 * len(self.test_suite))
-        print(self.value)
+        # print(self.value)
         self.value = 1 - self.value
-        print(self.value)
+        # print(self.value)
         return self.value, tc_order
 
 
@@ -58,16 +58,19 @@ if (__name__ == "__main__"):
         ts_string = directory + file + "TestSuite" + suffix
 
     for i in range(iterations):
-        if suffix == "_MACO":
+        if suffix == "_MACO" or suffix == "_PC":
             ts = JSONParser().load(ts_string + str(i))
         else:
             ts = JSONParser().load(ts_string)
+        # ts = JSONParser().load(ts_string)
         if suffix == "":
             ts_length = int(len(ts.data)/4)
         else:
             ts_length = int(len(ts.data)/2)
+
         ts.data = ts.data[0:ts_length]
         faults = JSONParser().load("faults/" + file + fault_suffix + "Faults")
         apfd = APFD(ts, faults)
         apfd_value, tc_order = apfd.count()
+        print(str(i) + " " + str(apfd_value))
         XLSXParser().write(file, suffix, fault_suffix, apfd_value, tc_order)

@@ -1,7 +1,10 @@
 [
   {
     "tc_list": [
-      3
+      3,
+      4,
+      5,
+      7
     ],
     "detected": false,
     "py/object": "test_prioritization.fault.Fault",
@@ -9,7 +12,10 @@
   },
   {
     "tc_list": [
-      5
+      3,
+      4,
+      5,
+      7
     ],
     "detected": false,
     "py/object": "test_prioritization.fault.Fault",

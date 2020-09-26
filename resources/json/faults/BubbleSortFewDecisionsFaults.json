@@ -1,0 +1,28 @@
+[
+  {
+    "tc_list": [
+      3,
+	  5,
+	  8,
+	  10,
+	  11,
+	  15,
+	  16,
+	  17
+    ],
+    "detected": false,
+    "py/object": "test_prioritization.fault.Fault",
+    "py/seq": []
+  },
+  {
+    "tc_list": [
+      3,
+	  8,
+	  15,
+	  16
+    ],
+    "detected": false,
+    "py/object": "test_prioritization.fault.Fault",
+    "py/seq": []
+  }
+]
